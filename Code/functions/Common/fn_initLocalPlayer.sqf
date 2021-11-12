@@ -116,3 +116,14 @@ if(!isNil("CBA_fnc_addKeybind")) then {
 		["A3E Earplugs", "toggle_earplugs_key", localize "STR_A3E_initLocalPlayer_toggleEarplugs", {_this call A3E_fnc_toggleEarplugs}, ""] call CBA_fnc_addKeybind;
 	};
 };
+
+// Aldalon
+execVM "Aldalon\StaminaFatigueSwayRecoil.sqf";
+execVM "Aldalon\StatusHud\init.sqf";
+execVM "Aldalon\eli_earplugs.sqf";
+execVM "Aldalon\PW_HolsterAction.sqf";
+execVM "Aldalon\unflip_vehicle.sqf";
+execVM "Aldalon\enginesOff.sqf";
+execVM "Aldalon\MIL_ClearGrass.sqf";
+execVM "Aldalon\swim.sqf";
+execVM "Aldalon\dlc_unlocker.sqf";

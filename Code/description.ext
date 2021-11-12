@@ -90,9 +90,10 @@ class CfgDebriefingSections
 
 #include "include\params.hpp"
 #include "include\functions.hpp"
-
 #include "Scripts\outlw_magRepack\MagRepack_config.hpp"
 
+// Aldalon
+#include "Aldalon\StatusHud\config.hpp"
 
 class CfgRemoteExec
 {        
@@ -206,6 +207,10 @@ class RscTitles {
 				};
 			};
 	};
+
+	// Aldalon
+	#include "Aldalon\StatusHud\UI\defines.hpp"
+
 };
 class CfgCommands {
    allowedHTMLLoadURIs[] += {

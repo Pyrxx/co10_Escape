@@ -697,3 +697,6 @@ waitUntil {scriptDone _scriptHandle};
 		} foreach call A3E_fnc_GetPlayers;
 	};
 };
+
+// Aldalon
+execVM "Aldalon\IRLasers.sqf";
