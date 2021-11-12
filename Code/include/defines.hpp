@@ -1,6 +1,6 @@
 #define VERSION "{* VERSION *}"
 #define MISSIONNAME "{* MISSION_FULL *}"
-#define MISSIONNAMEFULL "{* MISSION_FULL *} {* ISLANDNAME *} {* MOD *} {* VERSION *}"
+#define MISSIONNAMEFULL "{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}"
 #define MOD "{* MOD *}"
 #define ISLAND "{* ISLANDNAME *}"
 #define RELEASE "{* RELEASE *}"
