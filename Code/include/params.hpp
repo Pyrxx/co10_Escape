@@ -2,25 +2,25 @@ class Params
 {
     class A3E_Param_Loadparams
     {
-            title = "Parameter Load and Save (save params between sessions, see readme!)";
-            values[] = {0, 1, 2};
-            texts[] = {"Use settings below and save (settings will be restored on mission restart)", "Load previously saved settings (Use below if none found)", "Use settings below without saving"};
-            default = 1;
+		title = "Parameter Load and Save (save params between sessions, see readme!)";
+		values[] = {0, 1, 2};
+		texts[] = {"Use settings below and save (settings will be restored on mission restart)", "Load previously saved settings (Use below if none found)", "Use settings below without saving"};
+		default = 1;
 	};
 	class A3E_Param_Spacer1
     {
-            title = "==================== Difficulty Settings ====================";
-            values[] = {0};
-            texts[] = {""};
-            default = 0;
+			title = "==================== Difficulty Settings ====================";
+			values[] = {0};
+			texts[] = {""};
+			default = 0;
 	};
     class A3E_Param_EnemySkill
 	{
-            title = "Enemy Skill";
-            values[] = {0, 1, 2, 3, 4};
-            texts[] = {"Cadet", "Easy", "Normal", "Hard", "Extreme"};
-			livechanges = 1;
-            default = 1;
+		title = "Enemy Skill";
+		values[] = {0, 1, 2, 3, 4};
+		texts[] = {"Cadet", "Easy", "Normal", "Hard", "Extreme"};
+		livechanges = 1;
+		default = 0;
 	};
 	class A3E_Param_EnemyFrequency
 	{
@@ -36,14 +36,14 @@ class Params
 		values[]={2,4,6,8,-1,-2,-3};
 		texts[]={"Few (2-3)", "Some (3-5)", "Large (5-7)", "Max (7-9)","Players 1:0.5","Players 1:1","Players 1:1.5"};
 		livechanges = 1;
-		default = -2;
+		default = 4;
 	};
 	class A3E_Param_EnemySpawnDistance
 	{
 		title="Enemy Spawn Distance";
 		values[]={500,800,1200};
 		texts[]={"Short (better performance, spawn in view possible)", "Medium", "Far (for good rigs)"};
-		default = 800;
+		default = 500;
 	};
 	class A3E_Param_VillageSpawnCount
 	{
@@ -82,7 +82,7 @@ class Params
 		texts[]={"1:1 (Normal)","1:6 (Day = 4 Hours)","1:12 (Day = 2 Hours)","1:24 (Day = 1 Hour)","1:36 (Day = 40 Minutes)"};
 		livechanges = 1;
 		code = "if(isserver) then {setTimeMultiplier _this;};";
-		default = 6;
+		default = 12;
 	};
 	class A3E_Param_WeatherOvercast
 	{
@@ -96,7 +96,7 @@ class Params
 		title="Fog Density";
 		values[] = {-1,0,1,2,3,4,5,6,7,8,9,10};
 		texts[] = {"Randomly picks one of the below values (heavily weighted towards no fog for a better gameplay experience)","No Fog","10%","20%","30%","40%","50%","60%","70%","80%","90%","100%"};
-		default = -1;
+		default = 0;
 	};
 	class A3E_Param_WeatherWind
 	{
@@ -131,7 +131,7 @@ class Params
 		title="Collect intel to reveal markers on map";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 		tooltip = "This will enable the collection of intel from enemies. Intel will reveal locations on the map.";
 	};
 	class A3E_Param_IntelChance
@@ -147,7 +147,7 @@ class Params
 		title="Display of markers on map";
 		values[]={0,1,2,3};
 		texts[]={"Always show (with type)","Always show marker but hide type (questionmark)","Show marker upon discovery","Never show markers"};
-		default = 2;
+		default = 1;
 	};
 	class A3E_Param_VehicleLock
 	{
@@ -169,7 +169,7 @@ class Params
 		title="War-Torn mode (CSAT and AAF are fighting each other)";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class A3E_Param_ReviveView
 	{
@@ -184,14 +184,14 @@ class Params
 		values[]={0, 1, 2};
 		texts[]={"Random", "Close", "Far"};
 		livechanges = 1;
-		default = 0;
+		default = 2;
 	};
 	class A3E_Param_Waffelbox
 	{
 		title="Additional Weaponbox (with less random content) at depots";
 		values[]={0,1};
 		texts[]={"Off", "On"};
-		default = 0;
+		default = 1;
 	};
 	class A3E_Param_NoNightvision
 	{
@@ -283,7 +283,7 @@ class Params
 		title="Mag repack";
 		values[]={0,1};
 		texts[]={"Disabled", "Enabled"};
-		default = 0;
+		default = 1;
 	};
 	class A3E_Param_Spacer7
     {
