@@ -30,21 +30,19 @@ a3e_arr_Escape_StartPositionGuardTypes = [
 // Prison backpack secondary weapon (and corresponding magazine type).
 a3e_arr_PrisonBackpackWeapons = [];
 //Pistols
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_ACPC2_F","9Rnd_45ACP_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_ACPC2_F","9Rnd_45ACP_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_ACPC2_F","9Rnd_45ACP_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_ACPC2_F","9Rnd_45ACP_Mag"];
 a3e_arr_PrisonBackpackWeapons pushback ["hgun_ACPC2_snds_F","9Rnd_45ACP_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_F","16Rnd_9x21_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_F","16Rnd_9x21_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_F","16Rnd_9x21_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_F","16Rnd_9x21_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_snds_F","16Rnd_9x21_Mag"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_Pistol_heavy_02_F","6Rnd_45ACP_Cylinder"];
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_Pistol_heavy_02_F","6Rnd_45ACP_Cylinder"];
+a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_snds_F","30Rnd_9x21_Mag"];
 a3e_arr_PrisonBackpackWeapons pushback ["hgun_Pistol_heavy_02_Yorris_F","6Rnd_45ACP_Cylinder"];
 //SMGs
 a3e_arr_PrisonBackpackWeapons pushback ["hgun_PDW2000_F","30Rnd_9x21_Mag"];
+a3e_arr_PrisonBackpackWeapons pushback ["hgun_PDW2000_F","30Rnd_9x21_Mag"];
+a3e_arr_PrisonBackpackWeapons pushback ["SMG_05_F", "30Rnd_9x21_Mag_SMG_02"];
+a3e_arr_PrisonBackpackWeapons pushback ["SMG_05_F", "30Rnd_9x21_Mag_SMG_02"];
+//Shotguns
+a3e_arr_PrisonBackpackWeapons pushback ["sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets"];
+a3e_arr_PrisonBackpackWeapons pushback ["sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets"];
+a3e_arr_PrisonBackpackWeapons pushback ["sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets"];
+a3e_arr_PrisonBackpackWeapons pushback ["sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets"];
 
 // Random array. Civilian vehicle classes for ambient traffic.
 a3e_arr_Escape_MilitaryTraffic_CivilianVehicleClasses = [
@@ -660,6 +658,8 @@ a3e_arr_Escape_InfantryTypes = [
 	,"O_Soldier_M_F"
 	,"O_Soldier_repair_F"
 	,"O_officer_F"
+    ,"O_ghillie_lsh_F"
+    ,"O_ghillie_sard_F"
 	,"O_soldier_UAV_F"
 	,"O_soldier_UAV_F"
 	,"O_Soldier_AAR_F"
@@ -730,7 +730,8 @@ a3e_arr_Escape_InfantryTypes_Ind = [
 	,"I_Soldier_LAT2_F"
 	,"I_Soldier_LAT2_F"
 	,"I_Spotter_F"
-	,"I_Sniper_F"
+    ,"I_ghillie_lsh_F"
+    ,"I_ghillie_sard_F"
 	,"I_Soldier_SL_F"
 	,"I_Soldier_TL_F"];
 	if(A3E_Param_UseDLCLaws==1) then {
@@ -748,7 +749,14 @@ a3e_arr_recon_InfantryTypes = [
 	,"O_recon_medic_F"
 	,"O_recon_F"
 	,"O_recon_LAT_F"
-	,"O_recon_TL_F"];
+	,"O_recon_TL_F"
+	,"O_V_Soldier_Exp_hex_F"
+	,"O_V_Soldier_JTAC_hex_F"
+	,"O_V_Soldier_M_hex_F"
+	,"O_V_Soldier_hex_F"
+	,"O_V_Soldier_Medic_hex_F"
+	,"O_V_Soldier_LAT_hex_F"
+	,"O_V_Soldier_TL_hex_F"];
 	if(A3E_Param_UseDLCMarksmen==1) then {
 		a3e_arr_recon_InfantryTypes pushback "O_Pathfinder_F";
 	};
@@ -921,56 +929,42 @@ a3e_arr_I_pilots = [
 // Weapons and ammo in the basic weapons box
 a3e_arr_AmmoDepotBasicWeapons = [];
 // CSAT weapons
-a3e_arr_AmmoDepotBasicWeapons pushback ["hgun_Rook40_F", 50, 4, 8, ["16Rnd_9x21_Mag"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["hgun_Pistol_heavy_02_F", 10, 4, 8, ["6Rnd_45ACP_Cylinder"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMG_02_F", 50, 4, 8, ["30Rnd_9x21_Mag"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_Katiba_F", 100, 2, 4, ["30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green_mag_Tracer"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_Katiba_C_F", 50, 2, 4, ["30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green_mag_Tracer"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_Katiba_GL_F", 75, 2, 4, ["30Rnd_65x39_caseless_green", "30Rnd_65x39_caseless_green_mag_Tracer", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell", "UGL_FlareWhite_F"], 4];
-
+a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_03_F", 20, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
+a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_SKS_TAN_F", 20, 1, 3, ["SMA_30Rnd_762x39_7n23_AP_Red","SMA_30Rnd_762x39_SKS_FMJ_Red"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_07_hex_F", 20, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK417_16in", 20, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_04_Tan_F", 20, 1, 3, ["10Rnd_127x54_Mag"], 12];
 // non-CSAT weapons
-a3e_arr_AmmoDepotBasicWeapons pushback ["hgun_PDW2000_F", 20, 4, 8, ["16Rnd_9x21_Mag", "30Rnd_9x21_Mag"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["hgun_ACPC2_F", 20, 4, 8, ["9Rnd_45ACP_Mag"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_Mk20_F", 50, 2, 4, ["30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Green", "30Rnd_556x45_Stanag_Tracer_Yellow", "30Rnd_556x45_Stanag"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_Mk20_GL_F", 50, 2, 4, ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Green", "30Rnd_556x45_Stanag_Tracer_Yellow", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell", "UGL_FlareWhite_F"], 4];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_Mk20C_F", 50, 2, 4, ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Green", "30Rnd_556x45_Stanag_Tracer_Yellow"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_TRG20_F", 10, 2, 4, ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Green", "30Rnd_556x45_Stanag_Tracer_Yellow"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_TRG21_F", 10, 2, 4, ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Green", "30Rnd_556x45_Stanag_Tracer_Yellow"], 6];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_TRG21_GL_F", 10, 2, 4, ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Red", "30Rnd_556x45_Stanag_Tracer_Green", "30Rnd_556x45_Stanag_Tracer_Yellow", "1Rnd_HE_Grenade_shell", "1Rnd_Smoke_Grenade_shell", "UGL_FlareWhite_F"], 6];
-
+a3e_arr_AmmoDepotBasicWeapons pushback ["sma_minimi_mk3_762tlb_des", 20, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
+a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_02_snd_F", 30, 1, 3, ["150Rnd_556x45_Drum_Mag_Tracer_F"], 5];
+a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_ARX_hex_F", 20, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_03_snd_F", 20, 1, 3, ["20Rnd_762x51_Mag"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_05_tan_f", 20, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
 
 // Weapons and ammo in the special weapons box
 a3e_arr_AmmoDepotSpecialWeapons = [];
 // CSAT weapons
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_01_DMS_BI_F", 10, 2, 4, ["10Rnd_762x54_Mag"], 9];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_GM6_LRPS_F", 10, 1, 2, ["5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag"], 9];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_GM6_ghex_LRPS_F", 10, 1, 2, ["5Rnd_127x108_Mag", "5Rnd_127x108_APDS_Mag"], 9]; 
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Zafir_F", 50, 2, 4, ["150Rnd_762x54_Box", "150Rnd_762x54_Box_Tracer"], 6];
-if(A3E_Param_UseDLCMarksmen==1) then {
-	a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_01_hex_F", 30, 2, 4, ["150Rnd_93x64_Mag"], 6];
-	a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_04_DMS_F", 10, 2, 4, ["10Rnd_127x54_Mag"], 12];
-	a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_05_KHS_LP_F", 10, 2, 4, ["10Rnd_93x64_DMR_05_Mag"], 12];
-};
+a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Zafir_F", 20, 1, 3, ["150Rnd_762x54_Box_Tracer"], 5];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_01_tan_F", 20, 1, 3, ["150Rnd_93x64_Mag"], 5];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_EBR_F", 20, 1, 3, ["20Rnd_762x51_Mag"], 10];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_06_camo_F", 20, 1, 3, ["20Rnd_762x51_Mag"], 10];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_GM6_camo_F", 30, 1, 3, ["5Rnd_127x108_Mag"], 15];
 // non-CAST weapons
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Mk200_F", 20, 2, 4, ["200Rnd_65x39_cased_Box", "200Rnd_65x39_cased_Box_Tracer"], 6];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_EBR_MRCO_LP_BI_F", 10, 2, 4, ["20Rnd_762x51_Mag"], 9];
-if(A3E_Param_UseDLCMarksmen==1) then {
-	a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_06_camo_khs_F", 10, 2, 4, ["20Rnd_762x51_Mag"], 10];
-};
+a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Mk200_F", 20, 1, 3, ["200Rnd_65x39_cased_Box_Tracer"], 6];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_02_sand_F", 20, 1, 3, ["130Rnd_338_Mag"], 5];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk17_16", 30, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_03_tan_F", 20, 1, 3, ["20Rnd_762x51_Mag"], 10];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_02_sniper_F", 20, 1, 3, ["10Rnd_338_Mag"], 12];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_LRR_camo_F", 20, 1, 3, ["7Rnd_408_Mag"], 14];
 
 // Weapons and ammo in the launchers box
 a3e_arr_AmmoDepotLaunchers = [];
-// CSAT weapons
 a3e_arr_AmmoDepotLaunchers pushback ["launch_RPG32_F", 50, 3, 5, ["RPG32_F", "RPG32_HE_F"], 6];
-a3e_arr_AmmoDepotLaunchers pushback ["launch_O_Titan_F", 50, 1, 1, ["Titan_AA"], 3];
-a3e_arr_AmmoDepotLaunchers pushback ["launch_O_Titan_short_F", 50, 1, 1, ["Titan_AP", "Titan_AT"], 3];
-a3e_arr_AmmoDepotLaunchers pushback ["launch_O_Vorona_brown_F", 50, 1, 1, ["Vorona_HEAT", "Vorona_HE"], 2];
-// non-CSAT weapons
-a3e_arr_AmmoDepotLaunchers pushback ["launch_NLAW_F", 50, 3, 5, ["NLAW_F"], 3];
-a3e_arr_AmmoDepotLaunchers pushback ["launch_MRAWS_olive_rail_F", 50, 1, 1, ["MRAWS_HEAT_F", "MRAWS_HE_F"], 2];
-//a3e_arr_AmmoDepotLaunchers pushback ["launch_I_Titan_F", 100, 1, 1, ["Titan_AA"], 3];
-//a3e_arr_AmmoDepotLaunchers pushback ["launch_I_Titan_short_F", 100, 1, 1, ["Titan_AP", "Titan_AT"], 3];
-
+a3e_arr_AmmoDepotLaunchers pushback ["launch_O_Titan_F", 50, 1, 1, ["Titan_AA"], 6];
+a3e_arr_AmmoDepotLaunchers pushback ["launch_O_Titan_short_F", 50, 1, 1, ["Titan_AP", "Titan_AT"], 6];
+a3e_arr_AmmoDepotLaunchers pushback ["launch_O_Vorona_brown_F", 50, 1, 1, ["Vorona_HEAT"], 6];
+a3e_arr_AmmoDepotLaunchers pushback ["launch_MRAWS_sand_rail_F", 50, 1, 1, ["MRAWS_HEAT_F"], 6];
+a3e_arr_AmmoDepotLaunchers pushback ["launch_MRAWS_sand_F", 50, 1, 1, ["MRAWS_HEAT_F", "MRAWS_HE_F"], 6];
 
 // Weapons and ammo in the ordnance box
 a3e_arr_AmmoDepotOrdnance = [];
@@ -987,14 +981,16 @@ a3e_arr_AmmoDepotVehicle pushback [objNull, 50, 1, 1, ["HandGrenade", "MiniGrena
 a3e_arr_AmmoDepotVehicle pushback [objNull, 50, 1, 1, ["SmokeShell", "SmokeShellYellow", "SmokeShellRed", "SmokeShellGreen", "SmokeShellPurple", "SmokeShellBlue", "SmokeShellOrange"], 50];
 a3e_arr_AmmoDepotVehicle pushback [objNull, 50, 1, 1, ["Chemlight_blue", "Chemlight_green", "Chemlight_red", "Chemlight_yellow"], 50];
 a3e_arr_AmmoDepotVehicle pushback [objNull, 10, 1, 1, ["1Rnd_Smoke_Grenade_shell", "1Rnd_SmokeBlue_Grenade_shell", "1Rnd_SmokeGreen_Grenade_shell", "1Rnd_SmokeOrange_Grenade_shell", "1Rnd_SmokePurple_Grenade_shell", "1Rnd_SmokeRed_Grenade_shell", "1Rnd_SmokeYellow_Grenade_shell"], 5];
+a3e_arr_AmmoDepotVehicle pushback [objNull, 10, 1, 1, ["3Rnd_Smoke_Grenade_shell", "3Rnd_SmokeBlue_Grenade_shell", "3Rnd_SmokeGreen_Grenade_shell", "3Rnd_SmokeOrange_Grenade_shell", "3Rnd_SmokePurple_Grenade_shell", "3Rnd_SmokeRed_Grenade_shell", "3Rnd_SmokeYellow_Grenade_shell"], 5];
 a3e_arr_AmmoDepotVehicle pushback [objNull, 50, 1, 1, ["FlareWhite_F", "FlareGreen_F", "FlareRed_F", "FlareYellow_F"], 25];
-a3e_arr_AmmoDepotVehicle pushback [objNull, 10, 1, 1, ["UGL_FlareWhite_F", "UGL_FlareGreen_F", "UGL_FlareRed_F", "UGL_FlareYellow_F", "UGL_FlareCIR_F"], 25];
-a3e_arr_AmmoDepotVehicle pushback [objNull, 10, 1, 1, ["1Rnd_HE_Grenade_shell"], 25];
+a3e_arr_AmmoDepotVehicle pushback [objNull, 10, 1, 1, ["UGL_FlareWhite_F", "UGL_FlareGreen_F", "UGL_FlareRed_F", "UGL_FlareYellow_F", "UGL_FlareCIR_F"], 5];
+a3e_arr_AmmoDepotVehicle pushback [objNull, 10, 1, 1, ["3Rnd_UGL_FlareWhite_F", "3Rnd_UGL_FlareGreen_F", "3Rnd_UGL_FlareRed_F", "3Rnd_UGL_FlareYellow_F", "3Rnd_UGL_FlareCIR_F"], 5];
+a3e_arr_AmmoDepotVehicle pushback [objNull, 10, 1, 1, ["1Rnd_HE_Grenade_shell", "3Rnd_HE_Grenade_shell"], 5];
 a3e_arr_AmmoDepotVehicleItems = [];
 a3e_arr_AmmoDepotVehicleItems pushback ["ToolKit", 20, 1, 1, [], 0];
 a3e_arr_AmmoDepotVehicleItems pushback ["Medikit", 20, 1, 1, [], 0];
 a3e_arr_AmmoDepotVehicleItems pushback ["FirstAidKit", 100, 10, 50, [], 0];
-a3e_arr_AmmoDepotVehicleBackpacks = ["B_TacticalPack_ocamo"];
+a3e_arr_AmmoDepotVehicleBackpacks = ["B_Bergen_mcamo_F","B_Bergen_hex_F"];
 // Items
 
 // Index 0: Item classname.
@@ -1004,52 +1000,88 @@ a3e_arr_AmmoDepotVehicleBackpacks = ["B_TacticalPack_ocamo"];
 
 a3e_arr_AmmoDepotItems = [];
 a3e_arr_AmmoDepotItems pushback ["Laserdesignator", 10, 1, 2];
-if(A3E_Param_NoNightvision==0) then {
-	a3e_arr_AmmoDepotItems pushback ["NVGoggles", 10, 1, 3];
-};
+a3e_arr_AmmoDepotItems pushback ["NVGoggles", 10, 1, 3];
 a3e_arr_AmmoDepotItems pushback ["Binocular", 50, 2, 3, [], 0];
-a3e_arr_AmmoDepotItems pushback ["Rangefinder", 10, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["Rangefinder", 20, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["ItemCompass", 50, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["ItemGPS", 10, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["ItemGPS", 20, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["ItemMap", 50, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["ItemRadio", 50, 1, 10];
-a3e_arr_AmmoDepotItems pushback ["ItemWatch", 50, 1, 10];
-a3e_arr_AmmoDepotItems pushback ["acc_flashlight", 50, 1, 5];
-a3e_arr_AmmoDepotItems pushback ["acc_pointer_IR", 10, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["muzzle_snds_acp", 10, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["muzzle_snds_B", 10, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["muzzle_snds_H", 10, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["muzzle_snds_H_MG", 10, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["muzzle_snds_L", 10, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["muzzle_snds_M", 10, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["optic_Aco", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_Aco_smg", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_ACO_grn", 20, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["optic_ACO_grn_smg", 20, 1, 3];
-a3e_arr_AmmoDepotItems pushback ["optic_Arco", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_Hamr", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_Holosight", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_Holosight_smg", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_MRCO", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_NVS", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_SOS", 10, 1, 2];
-if(A3E_Param_NoNightvision==0) then {
-	a3e_arr_AmmoDepotItems pushback ["optic_tws", 10, 1, 1];
-	a3e_arr_AmmoDepotItems pushback ["optic_tws_mg", 10, 1, 1];
-	a3e_arr_AmmoDepotItems pushback ["optic_Nightstalker", 10, 1, 1];
-};
-a3e_arr_AmmoDepotItems pushback ["O_UavTerminal", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_DMS", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_Yorris", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_LRPS", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_AMS", 10, 1, 2];
-a3e_arr_AmmoDepotItems pushback ["optic_KHS_blk", 10, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["acc_flashlight", 20, 1, 5];
+a3e_arr_AmmoDepotItems pushback ["acc_pointer_IR", 20, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_m_snd_F", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_H_snd_F", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_93mmg_tan", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_H_MG", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_65_TI_hex_F", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_acp", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_B", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_H", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_H_MG", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_L", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_M", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_B_snd_F", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["muzzle_snds_338_sand", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["bnae_suppressor_covdrt_virtual", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["SMA_supptan_762", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_supp2T_556", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_supp2btan_556", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_AAC_762_sdn6_d", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["sma_gemtech_one_blk", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["sma_gemtech_one_wdl", 30, 1, 3];
+a3e_arr_AmmoDepotItems pushback ["SMA_Silencer_556_Bronze", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_supp2smaT_556", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_Arco", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_Hamr", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_MRCO", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_ERCO_snd_F", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_SOS", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_DMS", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_LRPS", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_AMS", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_AMS_snd", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_KHS_blk", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_KHS_tan", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["sma_gemtech_one_des", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_ELCAN_SPECTER_TAN_ARDRDS", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_ELCAN_SPECTER_TAN_ARDRDS_4z", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["sma_spitfire_03_rds_black", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["sma_spitfire_03_rds_low_ard_black", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["sma_spitfire_03_rds_low_black", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_Yorris", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_MRD", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["bnae_scope_snd_virtual", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["bnae_truglo_snd_virtual", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["bnae_holder_virtual", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["optic_tws", 10, 1, 1];
+a3e_arr_AmmoDepotItems pushback ["optic_tws_mg", 10, 1, 1];
+a3e_arr_AmmoDepotItems pushback ["optic_Nightstalker", 10, 1, 1];
 a3e_arr_AmmoDepotItems pushback ["bipod_01_F_blk", 10, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["bipod_02_F_blk", 10, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["bipod_03_F_blk", 10, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["bipod_01_F_mtp", 10, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["bipod_02_F_hex", 10, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["bipod_03_F_oli", 10, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_Bandanna_sand", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_Booniehat_tan", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["O_NVGoggles_hex_F", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["NVGogglesB_gry_F", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["ItemGPS", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_Hat_tan", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_RAILGUARD_TAN_HK", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_Cap_marshal", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_FLASHHIDER2", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_supp1TT_556", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_supp1tan_556", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_rotex_tan", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_Hat_Safari_sand_F", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_ShemagOpen_tan", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_ShemagOpen_khk", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_StrawHat", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["SMA_SFFL_TAN", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["I_UavTerminal", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["C_UavTerminal", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["O_UavTerminal", 20, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["B_UavTerminal", 20, 1, 2];
 
 
 // Weapons that may show up in civilian cars
@@ -1058,28 +1090,36 @@ a3e_arr_AmmoDepotItems pushback ["bipod_03_F_oli", 10, 1, 2];
 // Index 1: Magazine classname.
 // Index 2: Number of magazines.
 a3e_arr_CivilianCarWeapons = [];
-a3e_arr_CivilianCarWeapons pushback ["hgun_Rook40_snds_F", "16Rnd_9x21_Mag", 9];
-a3e_arr_CivilianCarWeapons pushback ["hgun_Rook40_F", "16Rnd_9x21_Mag", 9];
+a3e_arr_CivilianCarWeapons pushback ["hgun_P07_F", "16Rnd_9x21_Mag", 5];
+a3e_arr_CivilianCarWeapons pushback ["hgun_P07_snds_F", "30Rnd_9x21_Mag", 11];
+a3e_arr_CivilianCarWeapons pushback ["hgun_Rook40_snds_F", "30Rnd_9x21_Mag", 9];
 a3e_arr_CivilianCarWeapons pushback ["hgun_ACPC2_F", "9Rnd_45ACP_Mag", 12];
-a3e_arr_CivilianCarWeapons pushback ["hgun_ACPC2_snds_F", "9Rnd_45ACP_Mag", 12];
-a3e_arr_CivilianCarWeapons pushback ["arifle_Katiba_F", "30Rnd_65x39_caseless_green", 6];
-a3e_arr_CivilianCarWeapons pushback ["arifle_Katiba_GL_F", "UGL_FlareWhite_F", 4];
+a3e_arr_CivilianCarWeapons pushback ["arifle_MXM_Hamr_pointer_F", "30Rnd_65x39_caseless_mag_Tracer", 8];
+a3e_arr_CivilianCarWeapons pushback ["arifle_MX_Hamr_pointer_F", "30Rnd_65x39_caseless_mag_Tracer", 6];
+a3e_arr_CivilianCarWeapons pushback ["arifle_MXM_SOS_pointer_F", "30Rnd_65x39_caseless_mag_Tracer", 7];
 a3e_arr_CivilianCarWeapons pushback ["arifle_Katiba_C_F", "30Rnd_65x39_caseless_green", 5];
 a3e_arr_CivilianCarWeapons pushback ["arifle_Mk20_GL_ACO_F", "UGL_FlareWhite_F", 8];
-a3e_arr_CivilianCarWeapons pushback ["arifle_TRG21_F", "30Rnd_556x45_Stanag", 6];
+a3e_arr_CivilianCarWeapons pushback ["SMG_01_Holo_F", "30Rnd_45ACP_Mag_SMG_01_Tracer_Green", 5];
 a3e_arr_CivilianCarWeapons pushback ["SMG_02_ACO_F", "30Rnd_9x21_Mag", 12];
-if(A3E_Param_UseDLCMarksmen==1) then {
-	a3e_arr_CivilianCarWeapons pushback ["srifle_DMR_06_camo_khs_F", "20Rnd_762x51_Mag", 8];
-};
+a3e_arr_CivilianCarWeapons pushback ["srifle_DMR_06_camo_khs_F", "20Rnd_762x51_Mag", 8];
 a3e_arr_CivilianCarWeapons pushback ["launch_RPG32_F", "RPG32_F", 2];
 a3e_arr_CivilianCarWeapons pushback ["MineDetector", objNull, 0];
-//a3e_arr_CivilianCarWeapons pushback ["Medikit", objNull, 0];
-//a3e_arr_CivilianCarWeapons pushback ["Toolkit", objNull, 0];
+a3e_arr_CivilianCarWeapons pushback ["Medikit", objNull, 0];
+a3e_arr_CivilianCarWeapons pushback ["Toolkit", objNull, 0];
 a3e_arr_CivilianCarWeapons pushback ["Binocular", objNull, 0];
 a3e_arr_CivilianCarWeapons pushback [objNull, "SatchelCharge_Remote_Mag", 2];
 a3e_arr_CivilianCarWeapons pushback [objNull, "HandGrenade", 5];
 a3e_arr_CivilianCarWeapons pushback [objNull, "SmokeShell", 5];
-
+a3e_arr_CivilianCarWeapons pushback ["srifle_DMR_06_camo_khs_F", "20Rnd_762x51_Mag", 8];
+a3e_arr_CivilianCarWeapons pushback ["launch_RPG32_F", "RPG32_F", 2];
+a3e_arr_CivilianCarWeapons pushback ["MineDetector", objNull, 0];
+a3e_arr_CivilianCarWeapons pushback ["Binocular", objNull, 0];
+a3e_arr_CivilianCarWeapons pushback [objNull, "SatchelCharge_Remote_Mag", 2];
+a3e_arr_CivilianCarWeapons pushback [objNull, "HandGrenade", 5];
+a3e_arr_CivilianCarWeapons pushback [objNull, "SmokeShell", 5];
+a3e_arr_CivilianCarWeapons pushback ["optic_Yorris", objNull, 0];
+a3e_arr_CivilianCarWeapons pushback ["sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets", 3];
+a3e_arr_CivilianCarWeapons pushback ["sgun_HunterShotgun_01_sawedoff_F", "2Rnd_12Gauge_Pellets", 3];
 
 // Here is a list of scopes, might get randomly added to enemy patrols:
 a3e_arr_Scopes = [
@@ -1261,7 +1301,7 @@ a3e_arr_AquaticPatrols = [
 // What kind of weapon boxes are spawned when the parameter "additional weapons" is activated
 // use to add boxes from mods to the ammo depots
 //////////////////////////////////////////////////////////////////
-a3e_additional_weapon_box_1 = "Box_NATO_Wps_F";
+a3e_additional_weapon_box_1 = "Box_NATO_Equip_F";
 a3e_additional_weapon_box_2 = "Box_NATO_WpsSpecial_F";
 
 //////////////////////////////////////////////////////////////////
@@ -1310,28 +1350,61 @@ a3e_arr_CrashSiteCrewCar = [
 // Weapons and ammo in crash site box
 a3e_arr_CrashSiteWeapons = [];
 a3e_arr_CrashSiteWeapons pushback ["launch_NLAW_F", 10, 1, 2, ["NLAW_F"], 3];
-a3e_arr_CrashSiteWeapons pushback ["launch_MRAWS_sand_F", 10, 1, 2, ["MRAWS_HEAT_F","MRAWS_HE_F"], 2];
-a3e_arr_CrashSiteWeapons pushback ["srifle_EBR_DMS_F", 10, 1, 2, ["20Rnd_762x51_Mag"], 8];
-a3e_arr_CrashSiteWeapons pushback ["srifle_LRR_LRPS_F", 10, 1, 2, ["7Rnd_408_Mag"], 8];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MX_F", 75, 2, 4, ["30Rnd_65x39_caseless_mag"], 6];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MX_GL_F", 50, 2, 4, ["30Rnd_65x39_caseless_mag", "1Rnd_HE_Grenade_shell", "UGL_FlareGreen_F"], 6];
+a3e_arr_CrashSiteWeapons pushback ["launch_O_Vorona_brown_F", 10, 1, 1, ["Vorona_HEAT", "Vorona_HE"], 6];
+a3e_arr_CrashSiteWeapons pushback ["launch_MRAWS_sand_rail_F", 10, 1, 1, ["MRAWS_HEAT_F", "MRAWS_HE_F"], 6];
+a3e_arr_CrashSiteWeapons pushback ["launch_MRAWS_sand_F", 10, 1, 1, ["MRAWS_HEAT_F", "MRAWS_HE_F"], 6];
+a3e_arr_CrashSiteWeapons pushback ["srifle_EBR_F", 10, 1, 2, ["20Rnd_762x51_Mag"], 8];
+a3e_arr_CrashSiteWeapons pushback ["srifle_LRR_F", 10, 1, 2, ["7Rnd_408_Mag"], 8];
 a3e_arr_CrashSiteWeapons pushback ["arifle_MX_SW_F", 20, 1, 2, ["100Rnd_65x39_caseless_mag_Tracer"], 6];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MXM_F", 10, 1, 2, ["30Rnd_65x39_caseless_mag"], 8];
-a3e_arr_CrashSiteWeapons pushback ["SMG_01_Holo_pointer_snds_F", 50, 1, 2, ["30Rnd_45ACP_Mag_SMG_01"], 8];
-if(A3E_Param_UseDLCMarksmen==1) then {
-	a3e_arr_CrashSiteWeapons pushback ["MMG_02_sand_F", 10, 2, 4, ["130Rnd_338_Mag"], 6];
-	a3e_arr_CrashSiteWeapons pushback ["MMG_02_camo_F", 10, 2, 4, ["130Rnd_338_Mag"], 6];
-	a3e_arr_CrashSiteWeapons pushback ["MMG_02_black_F", 10, 2, 4, ["130Rnd_338_Mag"], 6];
-	a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_02_camo_AMS_LP_F", 30, 2, 4, ["10Rnd_338_Mag"], 10];
-	a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_02_sniper_AMS_LP_S_F", 10, 2, 4, ["10Rnd_338_Mag"], 10];
-	a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_03_AMS_F", 10, 2, 4, ["20Rnd_762x51_Mag"], 12];
-};
+a3e_arr_CrashSiteWeapons pushback ["SMG_01_Holo_pointer_snds_F", 10, 1, 2, ["30Rnd_45ACP_Mag_SMG_01"], 8];
+a3e_arr_CrashSiteWeapons pushback ["SMA_SKS_TAN_F", 30, 1, 2, ["SMA_30Rnd_762x39_7n23_AP_Red","SMA_30Rnd_762x39_SKS_FMJ_Red"], 8];
+a3e_arr_CrashSiteWeapons pushback ["SMA_HK417_16in", 30, 1, 2, ["SMA_20Rnd_762x51mm_M80A1_EPR_Tracer","SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer","SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer"], 8];
+a3e_arr_CrashSiteWeapons pushback ["sma_minimi_mk3_762tlb_des", 30, 1, 2, ["SMA_150Rnd_762_M80A1_Tracer"], 8];
+a3e_arr_CrashSiteWeapons pushback ["SMA_Mk17_16", 30, 1, 2, ["SMA_20Rnd_762x51mm_M80A1_EPR_Tracer","SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer","SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer"], 8];
 // Attachments and other items in crash site box
 a3e_arr_CrashSiteItems = [];
-a3e_arr_CrashSiteItems pushback ["optic_Hamr", 10, 1, 3];
-a3e_arr_CrashSiteItems pushback ["optic_Aco", 10, 1, 3];
-a3e_arr_CrashSiteItems pushback ["optic_Aco_smg", 10, 1, 3];
-a3e_arr_CrashSiteItems pushback ["optic_Holosight", 10, 1, 3];
-a3e_arr_CrashSiteItems pushback ["optic_SOS", 10, 1, 3];
-a3e_arr_CrashSiteItems pushback ["muzzle_snds_H", 10, 1, 3];
-a3e_arr_CrashSiteItems pushback ["B_UavTerminal", 50, 1, 1];
+a3e_arr_CrashSiteItems pushback ["optic_Hamr", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["optic_SOS", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["muzzle_snds_H", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["sma_gemtech_one_blk", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["sma_gemtech_one_wdl", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["SMA_ELCAN_SPECTER_TAN_ARDRDS", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["SMA_ELCAN_SPECTER_TAN_ARDRDS_4z", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["optic_ERCO_snd_F", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["ItemGPS", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["H_Hat_tan", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["optic_LRPS", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["Medikit", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["NVGoggles", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["H_Hat_Safari_sand_F", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["H_ShemagOpen_khk", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["H_ShemagOpen_tan", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["muzzle_snds_338_sand", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["muzzle_snds_m_snd_F", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["muzzle_snds_H_snd_F", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["muzzle_snds_93mmg_tan", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["muzzle_snds_H_MG", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["muzzle_snds_65_TI_hex_F", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["H_StrawHat", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["SMA_SFFL_TAN", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["I_UavTerminal", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["C_UavTerminal", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["O_UavTerminal", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["B_UavTerminal", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["sma_spitfire_03_rds_black", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["sma_spitfire_03_rds_low_ard_black", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["sma_spitfire_03_rds_low_black", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["muzzle_snds_B_snd_F", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["SMA_rotex_tan", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["SMA_supp1tan_556", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["SMA_supp1TT_556", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["SMA_FLASHHIDER2", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["H_Cap_marshal", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["ItemMap", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["SMA_RAILGUARD_TAN_HK", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["optic_DMS", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["O_NVGoggles_hex_F", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["H_Booniehat_tan", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["H_Bandanna_sand", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["optic_Arco", 20, 1, 3];
+a3e_arr_CrashSiteItems pushback ["optic_AMS_snd", 20, 1, 3];
