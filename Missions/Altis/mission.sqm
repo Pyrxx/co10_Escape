@@ -8,21 +8,27 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
 		"A3_Static_F_Mortar_01",
-		"A3_Armor_F_T100K"
+		"A3_Armor_F_T100K",
+		"A3_Characters_F",
+		"A3_Characters_F_Exp",
+		"A3_Characters_F_Mark"
 	};
 	addOnsAuto[]=
 	{
 		{* REQUIRE *}
+		"a3_map_altis",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f_beta",
 		"A3_Static_F_Mortar_01",
 		"A3_Armor_F_T100K",
-		"a3_map_altis"
+		"A3_Characters_F",
+		"A3_Characters_F_Exp",
+		"A3_Characters_F_Mark"
 	};
 	randomSeed=16426086;
 	class Intel
 	{
-		briefingName="{* MISSION *} {* ISLANDNAME *} {* MOD *} {* VERSION *}";
+		briefingName="{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}";
 		startWeather=0;
 		startWind=0.099999994;
 		startWaves=0.099999994;

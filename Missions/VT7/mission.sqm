@@ -28,13 +28,15 @@ addons[]=
 	"A3_Boat_F_Boat_Transport_01",
 	"A3_Boat_F_Gamma_Boat_Civil_01",
 	"A3_Boat_F_Exp_Scooter_Transport_01",
-	"A3_Boat_F_Exp_Boat_Transport_02"
+	"A3_Boat_F_Exp_Boat_Transport_02",
+	"A3_Characters_F_Exp",
+	"A3_Characters_F_Mark"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=7;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -70,6 +72,20 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item5
+		{
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Characters_F_Mark";
+			name="Arma 3 Marksmen - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=2789094;
@@ -81,7 +97,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="{* MISSION *} {* ISLANDNAME *} {* MOD *} {* VERSION *}";
+		briefingName="{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}";
 		timeOfChanges=1800.0002;
 		startWeather=0.30000001;
 		startWind=0.1;
@@ -5953,7 +5969,7 @@ class Mission
 		{
 			dataType="Marker";
 			position[]={18001.375,28.003,13796.654};
-			name="A3E_BoatExtractionSpawnPos15";
+			name="A3E_BoatExtractionSpawnPos16";
 			type="Empty";
 			colorName="ColorBlue";
 			id=525;
