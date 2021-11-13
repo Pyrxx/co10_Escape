@@ -98,7 +98,7 @@ Only Medics and Engineers are playable, since these are the only classes that be
 * PW_HolsterAction - weapon holstering via action menu
 * StaminaFatigueSwayRecoil - disabled stamina and fatigue, reduced weapon sway and recoil
 * swim - faster swimming
-* unflip_vehicle - ability to unflip vehicles
+* unflip_vehicle - ability to unflip vehicles via action menu
 
 
 ---
