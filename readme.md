@@ -46,7 +46,7 @@ Only Medics and Engineers are playable, since these are the only classes that be
 
 ## Gear Config (UnitClasses.sqf)
 * prison backpack contains a shotgun from Contact DLC, removed some handguns, increased probability of SMGs
-* altered content of boxes found at weapon depots and crashsites
+* altered contents of boxes found at weapon depots and crashsites
 * changed spawn probability and quantity of many items
 * replaced vanilla snipers with the ones from Marksmen DLC
 * added Viper Units from Apex DLC to Vanilla Config
@@ -92,7 +92,7 @@ Only Medics and Engineers are playable, since these are the only classes that be
 
 * StatusHud - a small HUD element that shows the players health status along other information
 * eli_earplugs - earplugs de-/activated via action menu
-* enginesOff - automatically turns off the engine when you ejecting from a vehicle, so you can double-tap "v" to jump out of a car without stopping it completely
+* enginesOff - automatically turns off the engine when ejecting from a vehicle, so you can double-tap "v" to jump out of a car without stopping it completely
 * IRLasers - AIs using flashlights and IR lasers at night
 * MIL_ClearGrass - clears grass around player on demand
 * PW_HolsterAction - weapon holstering via action menu
