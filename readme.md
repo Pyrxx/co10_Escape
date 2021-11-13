@@ -40,10 +40,6 @@ This variant of [co10_escape](https://github.com/NeoArmageddon/co10_Escape) prim
 ## Player Units
 Only Medics and Engineers are playable, since these are the only classes that benefit from some special abilities (Heal and Repair).
 
-## World Configs
-* Decreased amount of communication centers. On a small map like Ruha (8x8km) only 2 of them can be found.
-* Increased amount of crash sites.
-
 ## Gear Config (UnitClasses.sqf)
 * prison backpack contains a shotgun from Contact DLC, removed some handguns, increased probability of SMGs
 * altered contents of boxes found at weapon depots and crashsites
@@ -51,41 +47,10 @@ Only Medics and Engineers are playable, since these are the only classes that be
 * replaced vanilla snipers with the ones from Marksmen DLC
 * added Viper Units from Apex DLC to Vanilla Config
 
-## Mission Parameters
-
-|         **Parameter**         | **Default** | **Text** |
-|:------------------------------|:-----------:|:-|
-| A3E_Param_Loadparams          |      1      | Load previously saved settings (Use below if none found) |
-| A3E_Param_EnemySkill          |      0      | Cadet |
-| A3E_Param_EnemyFrequency      |      2      | Some (3-5) |
-| A3E_Param_EnemyGroupSize      |      4      | Some (3-5) |
-| A3E_Param_EnemySpawnDistance  |     500     | Short (better performance, spawn in view possible) |
-| A3E_Param_VillageSpawnCount   |      1      | Low (better performance) |
-| A3E_Param_SearchChopper       |      0      | Random (Chooses between Easy and Hard Values) |
-| A3E_Param_TimeOfDay           |      8      | 08:00 |
-| A3E_Param_TimeMultiplier      |     12      | 1:12 (Day = 2 Hours) |
-| A3E_Param_WeatherOvercast     |     -1      | Random  |
-| A3E_Param_WeatherFog          |      0      | No Fog |
-| A3E_Param_WeatherWind         |     -1      | Random |
-| A3E_Param_WeatherRain         |     -1      | Random |
-| A3E_Param_Grass               |     12      | Normal |
-| A3E_Param_UseIntel            |      0      | Disabled |
-| A3E_Param_RevealMarkers       |      1      | Always show marker but hide type (questionmark) |
-| A3E_Param_VehicleLock         |      0      | None |
-| A3E_Param_Artillery           |      1      | Default |
-| A3E_Param_War_Torn            |      1      | Enabled |
-| A3E_Param_ReviveView          |      1      | Hindsight Cam |
-| A3E_Param_ExtractionSelection |      2      | Far |
-| A3E_Param_Waffelbox           |      1      | On |
-| A3E_Param_NoNightvision       |      0      | All |
-| A3E_Param_SendStatistics      |      1      | On |
-| A3E_Param_UseDLCApex          |      1      | Yes |
-| A3E_Param_UseDLCHelis         |      1      | Yes |
-| A3E_Param_UseDLCMarksmen      |      1      | Yes |
-| A3E_Param_UseDLCLaws          |      1      | Yes |
-| A3E_Param_UseDLCTanks         |      1      | Yes |
-| A3E_Param_UseDLCContact       |      1      | Yes |
-| A3E_Param_Magrepack           |      1      | Enabled |
+## Minor changes
+* Decreased amount of communication centers. On a small map like Ruha (8x8km) only 2 of them can be found.
+* Increased amount of crash sites.
+* altered mission parameter defaults
 
 
 # ADDITIONAL SCRIPTS
@@ -94,7 +59,7 @@ Only Medics and Engineers are playable, since these are the only classes that be
 * eli_earplugs - earplugs de-/activated via action menu
 * enginesOff - automatically turns off the engine when ejecting from a vehicle, so you can double-tap "v" to jump out of a car without stopping it completely
 * IRLasers - AIs using flashlights and IR lasers at night
-* MIL_ClearGrass - clears grass around player on demand
+* MIL_ClearGrass - clears grass around player via action menu
 * PW_HolsterAction - weapon holstering via action menu
 * StaminaFatigueSwayRecoil - disabled stamina and fatigue, reduced weapon sway and recoil
 * swim - faster swimming
