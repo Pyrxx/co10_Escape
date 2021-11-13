@@ -53,7 +53,7 @@ Only Medics and Engineers are playable, since these are the only classes that be
 * altered mission parameter defaults
 
 
-# ADDITIONAL SCRIPTS
+## Additional scripts
 
 * StatusHud - a small HUD element that shows the players health status along other information
 * eli_earplugs - earplugs de-/activated via action menu
