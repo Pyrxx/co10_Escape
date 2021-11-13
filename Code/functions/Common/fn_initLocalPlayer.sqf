@@ -126,4 +126,3 @@ execVM "Aldalon\unflip_vehicle.sqf";
 execVM "Aldalon\enginesOff.sqf";
 execVM "Aldalon\MIL_ClearGrass.sqf";
 execVM "Aldalon\swim.sqf";
-execVM "Aldalon\dlc_unlocker.sqf";
