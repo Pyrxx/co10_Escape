@@ -205,6 +205,7 @@ class CfgFunctions
 			class DepopulateAquaticPatrol {};
 			class InitAquaticPatrolMarkers {};
 			class GarrisonUnits {};
+			class FindRoadSegment {};
 		};
 	};
 	class ATR

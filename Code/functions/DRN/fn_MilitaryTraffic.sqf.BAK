@@ -86,7 +86,8 @@ if (isNil "drn_fnc_MilitaryTraffic_MoveVehicle") then {
             _destinationPos = + _firstDestinationPos;
         }
         else {
-            _destinationSegment = [_vehicle, 0, 2000] call drn_fnc_findRoadSegment;
+            _roadSegments = _vehicle nearroads 2000;
+            _destinationSegment = selectRandom _roadSegments;
             _destinationPos = getPos _destinationSegment;
         };
         
@@ -114,19 +115,81 @@ _possibleVehicles = [];
 
 _fnc_FindSpawnSegment = {
     private ["_referenceUnits", "_minSpawnDistance", "_maxSpawnDistance", "_activeVehiclesAndGroup"];
-    private ["_result"];
+    private ["_roadSegments", "_roadSegment", "_isOk", "_tries", "_result", "_spawnDistanceDiff", "_refPosX", "_refPosY", "_dir", "_tooFarAwayFromAll", "_tooClose", "_tooCloseToAnotherVehicle"];
 
     _referenceUnits = _this select 0;
     _minSpawnDistance = _this select 1;
     _maxSpawnDistance = _this select 2;
     _activeVehiclesAndGroup = _this select 3;
     
-    if(count _referenceUnits == 0) exitwith {objNull};
+    _spawnDistanceDiff = _maxSpawnDistance - _minSpawnDistance;
+    _roadSegment = "NULL";
+	if(count _referenceUnits == 0) exitwith {"NULL"};
 	private _refUnit = objNull;
     _refUnit = vehicle (selectRandom _referenceUnits);
-    if(isNull _refUnit) exitwith {objNull};
-+    
-+   _result = [_refUnit, _minSpawnDistance, _maxSpawnDistance] call drn_fnc_findRoadSegment;
+	if(isNull _refUnit) exitwith {"NULL"};
+    _isOk = false;
+    _tries = 0;
+    while {!_isOk && _tries < 5} do {
+        _isOk = true;
+        
+        _dir = random 360;
+        _refPosX = ((getPos _refUnit) select 0) + (_minSpawnDistance + _spawnDistanceDiff) * sin _dir;
+        _refPosY = ((getPos _refUnit) select 1) + (_minSpawnDistance + _spawnDistanceDiff) * cos _dir;
+        
+        _roadSegments = [_refPosX, _refPosY] nearRoads (_spawnDistanceDiff);
+        
+        if (count _roadSegments > 0) then {
+            _roadSegment = selectRandom _roadSegments;
+            
+            // Check if road segment is at spawn distance
+            _tooFarAwayFromAll = true;
+            _tooClose = false;
+            {
+                private ["_tooFarAway"];
+                
+                _tooFarAway = false;
+                
+                if ((vehicle _x) distance (getPos _roadSegment) < _minSpawnDistance) then {
+                    _tooClose = true;
+                };
+                if ((vehicle _x) distance (getPos _roadSegment) > _maxSpawnDistance) then {
+                    _tooFarAway = true;
+                };
+                if (!_tooFarAway) then {
+                    _tooFarAwayFromAll = false;
+                };
+                
+                _tooCloseToAnotherVehicle = false;
+                {
+                    private ["_vehicle"];
+                    _vehicle = _x select 0;
+                    
+                    if ((getPos _roadSegment) distance _vehicle < 100) then {
+                        _tooCloseToAnotherVehicle = true;
+                    };                
+                } foreach _activeVehiclesAndGroup;
+            } foreach _referenceUnits;
+            
+            _isOk = true;
+            
+            if (_tooClose || _tooFarAwayFromAll || _tooCloseToAnotherVehicle) then {
+                _isOk = false;
+                _tries = _tries + 1;
+            };
+        }
+        else {
+            _isOk = false;
+            _tries = _tries + 1;
+        };
+    };
+
+    if (!_isOk) then {
+        _result = "NULL";
+    }
+    else {
+        _result = _roadSegment;
+    };
 
     _result
 };
@@ -158,26 +221,27 @@ while {true} do {
         _spawnSegment = [_referenceUnits, _minDistance, _maxSpawnDistance, _activeVehiclesAndGroup] call _fnc_FindSpawnSegment;
         
         // If there were spawn positions
-        if (!isNull _spawnSegment) then {
+        if (str _spawnSegment != """NULL""") then {
             _tries = 0;
             _refPos = position _spawnSegment;
             // Get first destination
             
-            _destinationSegment = objNull;
-+           while {isNull _destinationSegment} do {
+            _roadSegments = [];
+            while {count _roadSegments == 0} do {
                 _trafficLocation = floor random 8;
                 switch (_trafficLocation) do {
-                    case 0: { _destinationSegment = [[(_refPos select 0) + _goToDistance, (_refPos select 1) + _goToDistance], 0, 1500] call drn_fnc_findRoadSegment };
-+                    case 1: { _destinationSegment = [[(_refPos select 0) - _goToDistance, (_refPos select 1) + _goToDistance], 0, 1500] call drn_fnc_findRoadSegment };
-+                    case 2: { _destinationSegment = [[(_refPos select 0) + _goToDistance, (_refPos select 1) - _goToDistance], 0, 1500] call drn_fnc_findRoadSegment };
-+                    case 3: { _destinationSegment = [[(_refPos select 0) - _goToDistance, (_refPos select 1) - _goToDistance], 0, 1500] call drn_fnc_findRoadSegment };
-+                    case 4: { _destinationSegment = [[(_refPos select 0), (_refPos select 1) + _goToDistance*1.414], 0, 1500] call drn_fnc_findRoadSegment };
-+                    case 5: { _destinationSegment = [[(_refPos select 0), (_refPos select 1) - _goToDistance*1.414], 0, 1500] call drn_fnc_findRoadSegment };
-+                    case 6: { _destinationSegment = [[(_refPos select 0) + _goToDistance*1.414, (_refPos select 1)], 0, 1500] call drn_fnc_findRoadSegment };
-+                    case 7: { _destinationSegment = [[(_refPos select 0) - _goToDistance*1.414, (_refPos select 1)], 0, 1500] call drn_fnc_findRoadSegment };
+                    case 0: { _roadSegments = ([(_refPos select 0) + _goToDistance, (_refPos select 1) + _goToDistance]  ) nearRoads 1500; };
+                    case 1: { _roadSegments = ([(_refPos select 0) - _goToDistance, (_refPos select 1) + _goToDistance] ) nearRoads 1500; };
+                    case 2: { _roadSegments = ([(_refPos select 0) + _goToDistance, (_refPos select 1) - _goToDistance] ) nearRoads 1500; };
+                    case 3: { _roadSegments = ([(_refPos select 0) - _goToDistance, (_refPos select 1) - _goToDistance] ) nearRoads 1500; };
+                    case 4: { _roadSegments = ([(_refPos select 0), (_refPos select 1) + _goToDistance*1.414]  ) nearRoads 1500; };
+                    case 5: { _roadSegments = ([(_refPos select 0), (_refPos select 1) - _goToDistance*1.414] ) nearRoads 1500; };
+                    case 6: { _roadSegments = ([(_refPos select 0) + _goToDistance*1.414, (_refPos select 1)] ) nearRoads 1500; };
+                    case 7: { _roadSegments = ([(_refPos select 0) - _goToDistance*1.414, (_refPos select 1)] ) nearRoads 1500; };
                 };
             };
             
+            _destinationSegment = selectRandom _roadSegments;
             _destinationPos = getPos _destinationSegment;
             
             _direction = ((_destinationPos select 0) - (getPos _spawnSegment select 0)) atan2 ((_destinationPos select 1) - (getpos _spawnSegment select 1));
