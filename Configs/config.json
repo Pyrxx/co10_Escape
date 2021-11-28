@@ -5,7 +5,6 @@
 	"Missionname" : "co10_Escape",
 	"cpbo" : "S:\\ArmA3Work\\Tools\\cpbo\\cpbo.exe",
 	"Subconfigs": [
-<<<<<<< HEAD
 		"./Configs/subconfig_example.json",
 		"./Configs/RHS.json",
 		"./Configs/CUP.json",
@@ -22,15 +21,6 @@
 			"VERSION" : "1.10",
 			"MISSION" : "Escape",
 			"MISSION_FULL": "co10 Escape",
-=======
-		"./Configs/subconfig_example.json"
-	],
-	"replace" :
-		{
-			"VERSION" : "DEV Build",
-			"MISSION" : "Escape",
-			"MISSION_FULL": "Aldalon | co10 Escape",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"PLAYER_INIT" : "this setCaptive true; if(local this) then {{this unlinkItem _x;} forEach ['ItemMap','itemGPS','B_UavTerminal'];};"
 		},
 	"ParsedFiles" : ["mission.sqm","defines.hpp","fn_briefing.sqf"],
@@ -43,7 +33,6 @@
 				{
 					"MOD" : "BIS NATO vs CSAT",
 					"PLAYERSIDE" : "WEST",
-<<<<<<< HEAD
 					"PLAYERUNIT_1" : "B_Soldier_TL_F",
 					"PLAYERUNIT_2" : "B_soldier_AT_F",
 					"PLAYERUNIT_3" : "B_soldier_AA_F",
@@ -74,18 +63,6 @@
 					"PLAYERUNIT_8" : "O_soldier_UAV_F",
 					"PLAYERUNIT_9" : "O_soldier_M_F",
 					"PLAYERUNIT_10" : "O_medic_F"
-=======
-					"PLAYERUNIT_1" : "B_medic_F",
-					"PLAYERUNIT_2" : "B_engineer_F",
-					"PLAYERUNIT_3" : "B_medic_F",
-					"PLAYERUNIT_4" : "B_engineer_F",
-					"PLAYERUNIT_5" : "B_medic_F",
-					"PLAYERUNIT_6" : "B_engineer_F",
-					"PLAYERUNIT_7" : "B_medic_F",
-					"PLAYERUNIT_8" : "B_engineer_F",
-					"PLAYERUNIT_9" : "B_medic_F",
-					"PLAYERUNIT_10" : "B_engineer_F"
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 				}
 		},
 		{
@@ -96,7 +73,6 @@
 				{
 					"MOD" : "Apex NATO vs CSAT",
 					"PLAYERSIDE" : "WEST",
-<<<<<<< HEAD
 					"PLAYERUNIT_1" : "B_T_Soldier_TL_F",
 					"PLAYERUNIT_2" : "B_T_soldier_AT_F",
 					"PLAYERUNIT_3" : "B_T_soldier_AA_F",
@@ -127,18 +103,6 @@
 					"PLAYERUNIT_8" : "O_T_Soldier_UAV_F",
 					"PLAYERUNIT_9" : "O_T_Soldier_M_F",
 					"PLAYERUNIT_10" : "O_T_Medic_F"
-=======
-					"PLAYERUNIT_1" : "B_T_medic_F",
-					"PLAYERUNIT_2" : "B_T_engineer_F",
-					"PLAYERUNIT_3" : "B_T_medic_F",
-					"PLAYERUNIT_4" : "B_T_engineer_F",
-					"PLAYERUNIT_5" : "B_T_medic_F",
-					"PLAYERUNIT_6" : "B_T_engineer_F",
-					"PLAYERUNIT_7" : "B_T_medic_F",
-					"PLAYERUNIT_8" : "B_T_engineer_F",
-					"PLAYERUNIT_9" : "B_T_medic_F",
-					"PLAYERUNIT_10" : "B_T_engineer_F"
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 				}
 		},
 		{
@@ -149,7 +113,6 @@
                 {
                     "MOD" : "Contact CSAT vs NATO",
                     "PLAYERSIDE" : "EAST",
-<<<<<<< HEAD
                     "PLAYERUNIT_1" : "O_R_Soldier_TL_F",
                     "PLAYERUNIT_2" : "O_R_Soldier_LAT_F",
                     "PLAYERUNIT_3" : "O_R_Patrol_Soldier_A_F",
@@ -160,18 +123,6 @@
                     "PLAYERUNIT_8" : "O_R_soldier_exp_F",
                     "PLAYERUNIT_9" : "O_R_soldier_M_F",
                     "PLAYERUNIT_10" : "O_R_medic_F"
-=======
-                    "PLAYERUNIT_1" : "O_R_medic_F",
-                    "PLAYERUNIT_2" : "O_R_Patrol_Soldier_Engineer_F",
-                    "PLAYERUNIT_3" : "O_R_medic_F",
-                    "PLAYERUNIT_4" : "O_R_Patrol_Soldier_Engineer_F",
-                    "PLAYERUNIT_5" : "O_R_medic_F",
-                    "PLAYERUNIT_6" : "O_R_Patrol_Soldier_Engineer_F",
-                    "PLAYERUNIT_7" : "O_R_medic_F",
-                    "PLAYERUNIT_8" : "O_R_Patrol_Soldier_Engineer_F",
-                    "PLAYERUNIT_9" : "O_R_medic_F",
-                    "PLAYERUNIT_10" : "O_R_Patrol_Soldier_Engineer_F"
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
                 }
         }
 	],
@@ -187,7 +138,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Stratis",
 			"class" : "Stratis",
 			"path" : "./Islands/Stratis/",
@@ -198,8 +148,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Tanoa",
 			"class" : "Tanoa",
 			"path" : "./Islands/Tanoa/",
@@ -220,7 +168,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Bornholm",
 			"class" : "Bornholm",
 			"path" : "./Islands/Bornholm/",
@@ -231,8 +178,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Livonia",
 			"class" : "Enoch",
 			"path" : "./Islands/Enoch/",
@@ -243,7 +188,6 @@
 				}
 		},
         {
-<<<<<<< HEAD
 			"name" : "Weferlingen",
 			"class" : "gm_weferlingen_summer",
 			"path" : "./Islands/Weferlingen/",
@@ -304,15 +248,12 @@
 				}
 		},
         {
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Chernarus_2020",
 			"class" : "CUP_Chernarus_A3",
 			"path" : "./Islands/Chernarus_2020/",
 			"replace" :
 				{
 				"ISLAND" : "Chernarus_2020",
-<<<<<<< HEAD
 				"ISLANDNAME" : "Chernarus"
 				}
 		},
@@ -415,9 +356,6 @@
 				{
 				"ISLAND" : "Celle",
 				"ISLANDNAME" : "Celle"
-=======
-				"ISLANDNAME" : "Chernarus 2020"
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 				}
 		},
 		{
@@ -431,7 +369,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Zargabad",
 			"class" : "Zargabad",
 			"path" : "./Islands/Zargabad/",
@@ -502,8 +439,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Lythium",
 			"class" : "Lythium",
 			"path" : "./Islands/Lythium/",
@@ -514,7 +449,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Fallujah",
 			"class" : "Fallujah",
 			"path" : "./Islands/Fallujah/",
@@ -525,8 +459,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Esseker",
 			"class" : "Esseker",
 			"path" : "./Islands/Esseker/",
@@ -537,7 +469,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Australia",
 			"class" : "Australia",
 			"path" : "./Islands/Australia/",
@@ -588,8 +519,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Beketov",
 			"class" : "Beketov",
 			"path" : "./Islands/Beketov/",
@@ -600,7 +529,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Vis",
 			"class" : "Vis",
 			"path" : "./Islands/Vis/",
@@ -631,8 +559,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Rosche",
 			"class" : "WL_Rosche",
 			"path" : "./Islands/Rosche/",
@@ -643,7 +569,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Diyala",
 			"class" : "DYA",
 			"path" : "./Islands/DYA/",
@@ -684,8 +609,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Virolahti",
 			"class" : "VT7",
 			"path" : "./Islands/VT7/",
@@ -706,7 +629,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Prei Khmaoch Luong Legacy",
 			"class" : "prei_khmaoch_luong",
 			"path" : "./Islands/prei_khmaoch_luong/",
@@ -747,8 +669,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Tembelan",
 			"class" : "Tembelan",
 			"path" : "./Islands/Tembelan/",
@@ -769,7 +689,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "Utes",
 			"class" : "utes",
 			"path" : "./Islands/utes/",
@@ -800,8 +719,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Vidda",
 			"class" : "blud_vidda",
 			"path" : "./Islands/blud_vidda/",
@@ -812,7 +729,6 @@
 				}
 		},
 		{
-<<<<<<< HEAD
 			"name" : "MSKE",
 			"class" : "mske",
 			"path" : "./Islands/mske/",
@@ -843,8 +759,6 @@
 				}
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"name" : "Reshmaan",
 			"class" : "reshmaan",
 			"path" : "./Islands/reshmaan/",
@@ -864,7 +778,6 @@
 				"ISLANDNAME" : "Anizay"
 				}
 		},
-<<<<<<< HEAD
         {
 			"name" : "Vinjesvingen",
 			"class" : "tem_vinjesvingenc",
@@ -935,8 +848,6 @@
 				"ISLANDNAME" : "Ihantala"
 				}
 		},
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 		{
 			"name" : "Hellanmaa",
 			"class" : "hellanmaa",
@@ -956,7 +867,6 @@
 				"ISLAND" : "Hellanmaa",
 				"ISLANDNAME" : "Hellanmaa"
 				}
-<<<<<<< HEAD
 		},
         {
 			"name" : "Mull of Kintyre",
@@ -987,8 +897,6 @@
 				"ISLAND" : "Fapovo Island",
 				"ISLANDNAME" : "Fapovo Island"
 				}
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 		}
 	],
 	"Missions" : [
@@ -1000,7 +908,6 @@
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Stratis",
 			"sqm": "Stratis",
 			"mod" : "Vanilla",
@@ -1015,8 +922,6 @@
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"island" : "Tanoa",
 			"sqm": "Tanoa",
 			"mod" : "Vanilla Apex",
@@ -1031,7 +936,6 @@
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
         {
-<<<<<<< HEAD
 			"island" : "Livonia",
 			"sqm" : "Enoch",
 			"mod" : "Vanilla",
@@ -1088,8 +992,6 @@
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
         {
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"island" : "Chernarus_2020",
 			"sqm": "Chernarus_2020",
 			"mod" : "Vanilla",
@@ -1097,7 +999,6 @@
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Podagorsk",
 			"sqm": "FDF_Isle1_a",
 			"mod" : "Vanilla",
@@ -1175,8 +1076,6 @@
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"island" : "Takistan",
 			"sqm": "Takistan",
 			"mod" : "Vanilla",
@@ -1184,7 +1083,6 @@
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Zargabad",
 			"sqm": "Zargabad",
 			"mod" : "Vanilla",
@@ -1194,16 +1092,11 @@
 		{
 			"island" : "Porto",
 			"sqm": "Porto",
-=======
-			"island" : "Lythium",
-			"sqm": "Lythium",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Thirsk",
 			"mod" : "Vanilla",
 			"replace" : {},
@@ -1220,138 +1113,73 @@
 		{
 			"island" : "Capraia",
 			"sqm": "IsolaDiCapraia",
-=======
-			"island" : "Esseker",
-			"sqm": "Esseker",
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-			"island" : "Beketov",
-			"sqm": "Beketov",
-			"mod" : "Vanilla",
-			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
-		},
-		{
-			"island" : "Rosche",
-			"sqm": "Rosche",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
-			"mod" : "Vanilla",
-			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
-		},
-		{
-<<<<<<< HEAD
 			"island" : "Everon",
 			"sqm": "Eden",
-=======
-			"island" : "Virolahti",
-			"sqm": "VT7",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Malden",
 			"sqm": "Abel",
-=======
-			"island" : "Ruha",
-			"sqm": "Ruha",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Kolgujev",
 			"sqm": "Cain",
-=======
-			"island" : "Tembelan",
-			"sqm": "Tembelan",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Nogova",
 			"sqm": "Noe",
-=======
-			"island" : "Kujari",
-			"sqm": "Kujari",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Al Rayak",
 			"sqm": "pja310",
-=======
-			"island" : "Vidda",
-			"sqm": "blud_vidda",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Clafghan",
 			"sqm": "Clafghan",
-=======
-			"island" : "Reshmaan",
-			"sqm": "reshmaan",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Lythium",
 			"sqm": "Lythium",
-=======
-			"island" : "Anizay",
-			"sqm": "tem_anizay",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
-<<<<<<< HEAD
 			"island" : "Fallujah",
 			"sqm": "Fallujah",
-=======
-			"island" : "Hellanmaa",
-			"sqm": "Hellanmaa",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
-<<<<<<< HEAD
 		{
 			"island" : "Esseker",
 			"sqm": "Esseker",
-=======
-        {
-			"island" : "HellanmaaW",
-			"sqm": "HellanmaaW",
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
-<<<<<<< HEAD
 		{
 			"island" : "Beketov",
 			"sqm": "Beketov",
@@ -2324,56 +2152,6 @@
 			"mod" : "Vanilla US",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_CSAT_vs_NATO"
-=======
-        {
-			"island" : "Livonia",
-			"sqm" : "Enoch",
-			"mod" : "Vanilla Contact US",
-			"replace" : {},
-			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
-		},
-        {
-			"island" : "Chernarus",
-			"sqm" : "Chernarus",
-			"mod" : "Vanilla Contact US",
-			"replace" : {},
-			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
-		},
-        {
-			"island" : "Chernarus_Winter",
-			"sqm": "Chernarus_Winter",
-			"mod" : "Vanilla Contact US",
-			"replace" : {},
-			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
-		},
-        {
-			"island" : "Chernarus_2020",
-			"sqm": "Chernarus_2020",
-			"mod" : "Vanilla Contact US",
-			"replace" : {},
-			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
-		},
-        {
-			"island" : "Rosche",
-			"sqm": "Rosche",
-			"mod" : "Vanilla Contact US",
-			"replace" : {},
-			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
-		},
-        {
-			"island" : "Virolahti",
-			"sqm": "VT7",
-			"mod" : "Vanilla Contact US",
-			"replace" : {},
-			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
-		},
-        {
-			"island" : "Ruha",
-			"sqm": "Ruha",
-			"mod" : "Vanilla Contact US",
-			"replace" : {},
-			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 		},
         {
 			"island" : "Hellanmaa",
@@ -2385,7 +2163,6 @@
         {
 			"island" : "HellanmaaW",
 			"sqm": "HellanmaaW",
-<<<<<<< HEAD
 			"mod" : "Vanilla US",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_CSAT_vs_NATO"
@@ -2435,8 +2212,6 @@
         {
 			"island" : "Fapovo",
 			"sqm": "Fapovo",
-=======
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 			"mod" : "Vanilla Contact US",
 			"replace" : {},
 			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
@@ -2445,19 +2220,11 @@
 	"Addons" : [
 		{
 			"name" : "Vanilla",
-<<<<<<< HEAD
 			"mods" : ["Vanilla","Vanilla US"]
 		},
 		{
 			"name" : "Apex",
 			"mods" : ["Vanilla Apex","Vanilla Apex US"]
-=======
-			"mods" : ["Vanilla"]
-		},
-		{
-			"name" : "Apex",
-			"mods" : ["Vanilla Apex"]
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
 		}
 		,
 		{
@@ -2466,8 +2233,4 @@
 		}
 	]
 	
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f05f6a60f530227d65240dceb4210d52c1b6272c
