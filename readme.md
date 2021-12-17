@@ -7,6 +7,14 @@ This variant of [co10_escape](https://github.com/NeoArmageddon/co10_Escape) prim
 
 * [Specialist Military Arms (SMA)](https://steamcommunity.com/sharedfiles/filedetails/?id=699630614)
 
+## Winter Missions
+
+* [NATO Winter Faction](https://steamcommunity.com/sharedfiles/filedetails/?id=2315104187)
+* [CSAT Winter Faction](https://steamcommunity.com/sharedfiles/filedetails/?id=2361001257)
+* [AAF Winter Faction](https://steamcommunity.com/sharedfiles/filedetails/?id=2398904634)
+* [Snowmobile](https://steamcommunity.com/sharedfiles/filedetails/?id=2329040153)
+* [Santa Claus](https://steamcommunity.com/sharedfiles/filedetails/?id=567871211)
+
 
 # RECOMMENDED ADDONS
 
