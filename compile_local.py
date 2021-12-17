@@ -48,7 +48,7 @@ for mission in missions:
         raise NameError('Island was not found')
     if not 'name' in mission:
         mission['name'] = data['Missionname']+'_'+missionMod['name']
-    missiondir = data['BuildDir'] + '/' + data['replace']['VERSION'] + '/' + data['Missionname'] + '_' + data['replace']['VERSION'] + '.' + missionIsland['class']
+    missiondir = data['BuildDir'] + '/' + data['replace']['VERSION'] + '/' + data['Missionname'] + '_' + data['replace']['VERSION'] + mission['name'] + '.' + missionIsland['class']
     if os.path.exists(missiondir):
         shutil.rmtree(missiondir)
     shutil.copytree(data['Code']+'/',missiondir)

@@ -5,8 +5,7 @@
 	"Missionname" : "co10_Escape",
 	"cpbo" : "S:\\ArmA3Work\\Tools\\cpbo\\cpbo.exe",
 	"Subconfigs": [
-		"./Configs/subconfig_example.json",
-		"./Configs/WS.json"
+		"./Configs/subconfig_example.json"
 	],
 	"replace" :
 		{
@@ -76,7 +75,27 @@
                     "PLAYERUNIT_9" : "O_R_medic_F",
                     "PLAYERUNIT_10" : "O_R_Patrol_Soldier_Engineer_F"
                 }
-        }
+        },
+		{
+			"name" : "Winter",
+			"path" : "./Mods/Winter/",
+			"require" : ["NATO_Winter_Units"],
+			"replace" :
+				{
+					"MOD" : "Winter NATO vs CSAT",
+					"PLAYERSIDE" : "WEST",
+					"PLAYERUNIT_1" : "NATO_WINTER_SOLDIER_MEDIC",
+					"PLAYERUNIT_2" : "NATO_WINTER_SOLDIER_ENGINEER",
+					"PLAYERUNIT_3" : "NATO_WINTER_SOLDIER_MEDIC",
+					"PLAYERUNIT_4" : "NATO_WINTER_SOLDIER_ENGINEER",
+					"PLAYERUNIT_5" : "NATO_WINTER_SOLDIER_MEDIC",
+					"PLAYERUNIT_6" : "NATO_WINTER_SOLDIER_ENGINEER",
+					"PLAYERUNIT_7" : "NATO_WINTER_SOLDIER_MEDIC",
+					"PLAYERUNIT_8" : "NATO_WINTER_SOLDIER_ENGINEER",
+					"PLAYERUNIT_9" : "NATO_WINTER_SOLDIER_MEDIC",
+					"PLAYERUNIT_10" : "NATO_WINTER_SOLDIER_ENGINEER"
+				}
+		}
 	],
 	"Islands": [
 		{
@@ -309,16 +328,6 @@
 				"ISLANDNAME" : "Anizay"
 				}
 		},
-        {
-			"name" : "Vinjesvingen",
-			"class" : "tem_vinjesvingenc",
-			"path" : "./Islands/vinjesvingen/",
-			"replace" :
-				{
-				"ISLAND" : "Vinjesvingen",
-				"ISLANDNAME" : "Vinjesvingen"
-				}
-		},
 		{
 			"name" : "Hellanmaa",
 			"class" : "hellanmaa",
@@ -346,182 +355,189 @@
 			"sqm": "Altis",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
+		},
+		{
+			"island" : "Altis",
+			"sqm": "Altis",
+			"mod" : "Winter",
+			"replace" : {},
+			"name" : "_Winter_SMA"
 		},
 		{
 			"island" : "Stratis",
 			"sqm": "Stratis",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
+		},
+		{
+			"island" : "Stratis",
+			"sqm": "Stratis",
+			"mod" : "Winter",
+			"replace" : {},
+			"name" : "_Winter_SMA"
 		},
 		{
 			"island" : "Tanoa",
 			"sqm": "Tanoa",
 			"mod" : "Vanilla Apex",
 			"replace" : {},
-			"name" : "co10_Escape_APEX_NATO_vs_CSAT"
+			"name" : "_APEX_SMA"
 		},
 		{
 			"island" : "Malden 2035",
 			"sqm": "Malden",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
         {
 			"island" : "Weferlingen",
 			"sqm" : "Weferlingen",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
         {
 			"island" : "WeferlingenWinter",
 			"sqm" : "WeferlingenW",
-			"mod" : "Vanilla",
+			"mod" : "Winter",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_Winter_SMA"
 		},
 		{
 			"island" : "Gabreta",
 			"sqm" : "Gabreta",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Sefrou-Ramal",
 			"sqm" : "Sefrou-Ramal",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
         {
 			"island" : "Chernarus_2020",
 			"sqm": "Chernarus_2020",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Lingor",
 			"sqm": "Lingor3",
 			"mod" : "Vanilla Apex",
 			"replace" : {},
-			"name" : "co10_Escape_APEX_NATO_vs_CSAT"
+			"name" : "_APEX_SMA"
 		},
 		{
 			"island" : "Dingor",
 			"sqm": "Dingor",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Takistan",
 			"sqm": "Takistan",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Esseker",
 			"sqm": "Esseker",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Beketov",
 			"sqm": "Beketov",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Rosche",
 			"sqm": "Rosche",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Virolahti",
 			"sqm": "VT7",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Ruha",
 			"sqm": "Ruha",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Tembelan",
 			"sqm": "Tembelan",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Kujari",
 			"sqm": "Kujari",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Vidda",
 			"sqm": "blud_vidda",
-			"mod" : "Vanilla",
+			"mod" : "Winter",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_Winter_SMA"
 		},
 		{
 			"island" : "Reshmaan",
 			"sqm": "reshmaan",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Anizay",
 			"sqm": "tem_anizay",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
-		},
-        {
-			"island" : "Vinjesvingen",
-			"sqm": "vinjesvingen",
-			"mod" : "Vanilla",
-			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
 		{
 			"island" : "Hellanmaa",
 			"sqm": "Hellanmaa",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_SMA"
 		},
         {
 			"island" : "HellanmaaW",
 			"sqm": "HellanmaaW",
-			"mod" : "Vanilla",
+			"mod" : "Winter",
 			"replace" : {},
-			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+			"name" : "_Winter_SMA"
 		},
         {
 			"island" : "Livonia",
 			"sqm" : "Enoch",
 			"mod" : "Vanilla Contact US",
 			"replace" : {},
-			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
+			"name" : "_Contact_SMA"
 		}
 	],
 	"Addons" : [
@@ -537,6 +553,11 @@
 		{
 			"name" : "Contact",
 			"mods" : ["Vanilla Contact US"]
+		}
+		,
+		{
+			"name" : "Winter",
+			"mods" : ["Winter"]
 		}
 	]
 	
