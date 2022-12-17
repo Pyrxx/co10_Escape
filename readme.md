@@ -74,4 +74,4 @@ Only Medics and Engineers are playable, since these are the only classes that be
 
 ---
 
-Thanks to [NeoArmageddon](https://github.com/NeoArmageddon) and [Scruffy](https://github.com/ScruffyAT) <3
+Thanks to [NeoArmageddon aka CaptainPStar](https://github.com/CaptainPStar) and [Scruffy](https://github.com/ScruffyAT) <3
