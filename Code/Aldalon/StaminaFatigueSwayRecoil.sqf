@@ -15,6 +15,7 @@
 	while {true} do { 
 		player enableFatigue false;
 		player enableStamina false;
+		player enableAimPrecision false;
 		player allowSprint true;
 		player setCustomAimCoef 0.1;
 		player setUnitRecoilCoefficient 0.3;
