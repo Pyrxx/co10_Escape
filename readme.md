@@ -38,7 +38,6 @@ This variant of [co10_escape](https://github.com/NeoArmageddon/co10_Escape) prim
 * [Tembelan](https://steamcommunity.com/sharedfiles/filedetails/?id=1252091296)
 * [Kujari](https://steamcommunity.com/sharedfiles/filedetails/?id=1726494027)
 * [Vidda](https://steamcommunity.com/sharedfiles/filedetails/?id=1282716647)
-* [Reshmaan](https://steamcommunity.com/sharedfiles/filedetails/?id=843362862)
 * [Anizay](https://steamcommunity.com/sharedfiles/filedetails/?id=1537973181)
 * [Hellanmaa](https://steamcommunity.com/sharedfiles/filedetails/?id=1291778160)
 

@@ -309,16 +309,6 @@
 				}
 		},
 		{
-			"name" : "Reshmaan",
-			"class" : "reshmaan",
-			"path" : "./Islands/reshmaan/",
-			"replace" :
-				{
-				"ISLAND" : "Reshmaan",
-				"ISLANDNAME" : "Reshmaan"
-				}
-		},
-		{
 			"name" : "Anizay",
 			"class" : "tem_anizay",
 			"path" : "./Islands/tem_anizay/",
@@ -503,13 +493,6 @@
 			"mod" : "Winter",
 			"replace" : {},
 			"name" : "_Winter_SMA"
-		},
-		{
-			"island" : "Reshmaan",
-			"sqm": "reshmaan",
-			"mod" : "Vanilla",
-			"replace" : {},
-			"name" : "_SMA"
 		},
 		{
 			"island" : "Anizay",
