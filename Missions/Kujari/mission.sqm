@@ -91,10 +91,10 @@ class Intro
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
-		year=2008;
+		year=2019;
 		month=6;
-		day=24;
-		hour=15;
+		day=28;
+		hour=06;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};

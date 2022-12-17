@@ -140,9 +140,9 @@ class Mission
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
 		year=2035;
-		month=6;
-		day=10;
-		hour=15;
+		month=12;
+		day=09;
+		hour=06;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
