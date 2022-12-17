@@ -124,5 +124,4 @@ execVM "Aldalon\eli_earplugs.sqf";
 execVM "Aldalon\PW_HolsterAction.sqf";
 execVM "Aldalon\unflip_vehicle.sqf";
 execVM "Aldalon\enginesOff.sqf";
-execVM "Aldalon\MIL_ClearGrass.sqf";
 execVM "Aldalon\swim.sqf";
