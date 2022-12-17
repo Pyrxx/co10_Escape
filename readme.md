@@ -66,7 +66,6 @@ Only Medics and Engineers are playable, since these are the only classes that be
 * eli_earplugs - earplugs de-/activated via action menu
 * enginesOff - automatically turns off the engine when ejecting from a vehicle, so you can double-tap "v" to jump out of a car without stopping it completely
 * IRLasers - AIs using flashlights and IR lasers at night
-* MIL_ClearGrass - clears grass around player via action menu
 * PW_HolsterAction - weapon holstering via action menu
 * StaminaFatigueSwayRecoil - disabled stamina and fatigue, reduced weapon sway and recoil
 * swim - faster swimming
