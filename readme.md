@@ -62,14 +62,14 @@ Only Medics and Engineers are playable, since these are the only classes that be
 
 ## Additional scripts
 
-* StatusHud - a small HUD element that shows the players health status along other information
-* eli_earplugs - earplugs de-/activated via action menu
-* enginesOff - automatically turns off the engine when ejecting from a vehicle, so you can double-tap "v" to jump out of a car without stopping it completely
-* IRLasers - AIs using flashlights and IR lasers at night
-* PW_HolsterAction - weapon holstering via action menu
-* StaminaFatigueSwayRecoil - disabled stamina and fatigue, reduced weapon sway and recoil
-* swim - faster swimming
-* unflip_vehicle - ability to unflip vehicles via action menu
+* **StatusHud** - a small HUD element that shows the players health status along other information
+* **eli_earplugs** - earplugs de-/activated via action menu
+* **enginesOff** - automatically turns off the engine when ejecting from a vehicle, so you can double-tap "v" to jump out of a car without stopping it completely
+* **IRLasers** - AIs using flashlights and IR lasers at night
+* **PW_HolsterAction** - weapon holstering via action menu
+* **StaminaFatigueRecoil** - disabled stamina and fatigue, reduced weapon recoil
+* **swim** - faster swimming
+* **unflip_vehicle** - ability to unflip vehicles via action menu
 
 
 ---
