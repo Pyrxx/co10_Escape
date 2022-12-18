@@ -118,7 +118,7 @@ if(!isNil("CBA_fnc_addKeybind")) then {
 };
 
 // Aldalon
-execVM "Aldalon\StaminaFatigueSwayRecoil.sqf";
+execVM "Aldalon\StaminaFatigueRecoil.sqf";
 execVM "Aldalon\StatusHud\init.sqf";
 execVM "Aldalon\eli_earplugs.sqf";
 execVM "Aldalon\PW_HolsterAction.sqf";

@@ -1,14 +1,14 @@
 /*
 	AUTHOR: Pyrx
-	NAME: StaminaFatigueSwayRecoil.sqf	
+	NAME: StaminaFatigueRecoil.sqf	
 	VERSION: 0.1
 	
 	DESCRIPTION:
 	* Turns off Stamina and Fatigue
-	* Turns down Weapon Sway
+	* Turns down Weapon Recoil
 	USAGE:
-	paste this into init.sqf
-	0 = [] execVM 'StaminaFatigueSwayRecoil.sqf';
+	paste this into init.sqf / fn_initLocalPlayer.sqf
+	0 = [] execVM 'StaminaFatigueRecoil.sqf';
 */
 
 [] spawn { 
@@ -16,7 +16,6 @@
 		player enableFatigue false;
 		player enableStamina false;
 		player allowSprint true;
-		player setCustomAimCoef 0.1;
 		player setUnitRecoilCoefficient 0.3;
 		sleep 30; 
 	}; 
