@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=246;
+		nextID=261;
 	};
 	class MarkerIDProvider
 	{
@@ -119,7 +119,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=159;
+		items=174;
 		class Item0
 		{
 			dataType="Marker";
@@ -2119,6 +2119,306 @@ class Mission
 			name="A3E_CarExtractionPos3";
 			type="Empty";
 			id=245;
+		};
+		class Item159
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1124.5406,8.0455751,2408.3516};
+				angles[]={0.010664274,1.096007,0.015998369};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=246;
+			type="C_Truck_02_box_F";
+		};
+		class Item160
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6698.271,8.592309,3003.9736};
+				angles[]={6.2805333,1.0534761,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=247;
+			type="C_Truck_02_box_F";
+		};
+		class Item161
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9497.5547,7.9848971,2002.5192};
+				angles[]={0.015998369,4.8083439,6.2805333};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=248;
+			type="C_Truck_02_box_F";
+		};
+		class Item162
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13382.02,5.8127446,6601.8652};
+				angles[]={6.2511969,6.0201106,6.2325621};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=249;
+			type="C_Truck_02_box_F";
+		};
+		class Item163
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12984.616,8.3327074,10076.667};
+				angles[]={6.2778587,0.16941907,6.2778587};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=250;
+			type="C_Truck_02_box_F";
+		};
+		class Item164
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13539.402,36.648514,13320.728};
+				angles[]={6.2805333,5.4389868,6.2751846};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=251;
+			type="C_Truck_02_box_F";
+		};
+		class Item165
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7491.8271,123.49695,12665.127};
+				angles[]={6.2778478,1.505097,0.018663859};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=252;
+			type="C_Truck_02_box_F";
+		};
+		class Item166
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4327.3105,179.504,13083.66};
+				angles[]={6.272521,1.1441023,6.2645216};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=253;
+			type="C_Truck_02_box_F";
+		};
+		class Item167
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3004.0388,212.62196,12653.524};
+				angles[]={6.2751918,3.1316531,6.251195};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=254;
+			type="C_Truck_02_box_F";
+		};
+		class Item168
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={323.0368,297.31177,9382.4766};
+				angles[]={0.0026744273,3.6733611,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=255;
+			type="C_Truck_02_box_F";
+		};
+		class Item169
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3654.5242,313.25919,8975.7939};
+				angles[]={6.2698488,2.272779,0.010664274};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=256;
+			type="C_Truck_02_box_F";
+		};
+		class Item170
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3001.2522,344.99683,7471.499};
+				angles[]={6.2378807,0.10123903,0.034654226};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=257;
+			type="C_Truck_02_box_F";
+		};
+		class Item171
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2694.9568,213.3517,5604.2202};
+				angles[]={-0,0.10501942,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=258;
+			type="C_Truck_02_box_F";
+		};
+		class Item172
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2514.8521,192.53249,5283.459};
+				angles[]={0.0026744273,4.7925358,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=259;
+			type="C_Truck_02_box_F";
+		};
+		class Item173
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10460.255,225.47893,8874.3457};
+				angles[]={0.0026520467,5.7635894,0.0080009829};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				health=0.19896472;
+				ammo=0;
+				lock="LOCKED";
+				fuel=0;
+			};
+			id=260;
+			type="C_Truck_02_box_F";
 		};
 	};
 };
