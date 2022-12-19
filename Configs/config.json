@@ -178,16 +178,6 @@
 				"ISLANDNAME" : "Gabreta"
 				}
 		},
-		{
-			"name" : "Sefrou-Ramal",
-			"class" : "SefrouRamal",
-			"path" : "./Islands/Sefrou-Ramal/",
-			"replace" :
-				{
-				"ISLAND" : "Sefrou-Ramal",
-				"ISLANDNAME" : "Sefrou-Ramal"
-				}
-		},
         {
 			"name" : "Chernarus_2020",
 			"class" : "CUP_Chernarus_A3",
@@ -399,13 +389,6 @@
 		{
 			"island" : "Gabreta",
 			"sqm" : "Gabreta",
-			"mod" : "Vanilla",
-			"replace" : {},
-			"name" : "_SMA"
-		},
-		{
-			"island" : "Sefrou-Ramal",
-			"sqm" : "Sefrou-Ramal",
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "_SMA"
