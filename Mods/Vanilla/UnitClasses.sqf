@@ -1494,7 +1494,7 @@ a3e_arr_AquaticPatrols = [
 // use to add boxes from mods to the ammo depots
 //////////////////////////////////////////////////////////////////
 a3e_additional_weapon_box_1 = "Box_NATO_Equip_F";
-a3e_additional_weapon_box_2 = "Box_NATO_WpsSpecial_F";
+a3e_additional_weapon_box_2 = "Box_CSAT_Equip_F";
 
 //////////////////////////////////////////////////////////////////
 // fn_MortarSite
