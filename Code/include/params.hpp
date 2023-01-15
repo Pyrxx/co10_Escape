@@ -131,7 +131,7 @@ class Params
 		title="Collect intel to reveal markers on map";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 		tooltip = "This will enable the collection of intel from enemies. Intel will reveal locations on the map.";
 	};
 	class A3E_Param_IntelChance
@@ -147,7 +147,7 @@ class Params
 		title="Display of markers on map";
 		values[]={0,1,2,3};
 		texts[]={"Always show (with type)","Always show marker but hide type (questionmark)","Show marker upon discovery","Never show markers"};
-		default = 3;
+		default = 1;
 	};
 	class A3E_Param_VehicleLock
 	{
