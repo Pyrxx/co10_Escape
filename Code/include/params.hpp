@@ -131,7 +131,7 @@ class Params
 		title="Collect intel to reveal markers on map";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 0;
+		default = 1;
 		tooltip = "This will enable the collection of intel from enemies. Intel will reveal locations on the map.";
 	};
 	class A3E_Param_IntelChance
