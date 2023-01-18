@@ -504,6 +504,20 @@
 			"mod" : "Vanilla Contact US",
 			"replace" : {},
 			"name" : "_Contact_SMA"
+		},
+        {
+			"island" : "Ruha",
+			"sqm": "Ruha",
+			"mod" : "Vanilla Contact US",
+			"replace" : {},
+			"name" : "_Contact_SMA"
+		},
+        {
+			"island" : "Hellanmaa",
+			"sqm": "Hellanmaa",
+			"mod" : "Vanilla Contact US",
+			"replace" : {},
+			"name" : "_Contact_SMA"
 		}
 	],
 	"Addons" : [
