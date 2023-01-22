@@ -1,4 +1,4 @@
-A3E_MinComCenterDistance = 1500;
+A3E_MinComCenterDistance = 2500;
 A3E_WorldName = "Ruha";
 A3E_ComCenterCount = 2;
 A3E_AmmoDepotCount = 6;
