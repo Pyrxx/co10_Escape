@@ -229,16 +229,6 @@
 				}
 		},
 		{
-			"name" : "Beketov",
-			"class" : "Beketov",
-			"path" : "./Islands/Beketov/",
-			"replace" :
-				{
-				"ISLAND" : "Beketov",
-				"ISLANDNAME" : "Beketov"
-				}
-		},
-		{
 			"name" : "Rosche",
 			"class" : "WL_Rosche",
 			"path" : "./Islands/Rosche/",
@@ -424,13 +414,6 @@
 		{
 			"island" : "Esseker",
 			"sqm": "Esseker",
-			"mod" : "Vanilla",
-			"replace" : {},
-			"name" : "_SMA"
-		},
-		{
-			"island" : "Beketov",
-			"sqm": "Beketov",
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "_SMA"

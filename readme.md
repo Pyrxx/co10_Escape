@@ -26,7 +26,6 @@ This variant of [co10_escape](https://github.com/NeoArmageddon/co10_Escape) prim
 
 * Altis
 * [Anizay](https://steamcommunity.com/sharedfiles/filedetails/?id=1537973181)
-* [Beketov](https://steamcommunity.com/sharedfiles/filedetails/?id=743968516)
 * [Chernarus 2020](https://steamcommunity.com/sharedfiles/filedetails/?id=1981964169)
 * [Esseker](https://steamcommunity.com/sharedfiles/filedetails/?id=498101407)
 * [Gabreta](https://steamcommunity.com/sharedfiles/filedetails/?id=2503886780)
