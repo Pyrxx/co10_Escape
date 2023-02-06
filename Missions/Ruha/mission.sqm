@@ -116,7 +116,7 @@ class Mission
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
 		year=2019;
-		month=8;
+		month=10;
 		day=27;
 		hour=15;
 		startFogDecay=0.013;
