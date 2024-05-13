@@ -56,6 +56,7 @@ This variant of [co10_escape](https://github.com/NeoArmageddon/co10_Escape) prim
 * [Tembelan](https://steamcommunity.com/sharedfiles/filedetails/?id=1252091296)
 * [Vidda](https://steamcommunity.com/sharedfiles/filedetails/?id=1282716647)
 * [Virolahti](https://steamcommunity.com/sharedfiles/filedetails/?id=1926513010)
+* [Yulakia](https://steamcommunity.com/sharedfiles/filedetails/?id=2950257727)
 
 
 # SOME DETAILS ABOUT CHANGES MADE TO VANILLA CO10_ESCAPE

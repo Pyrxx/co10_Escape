@@ -429,6 +429,16 @@
 				"ISLAND" : "Fjord",
 				"ISLANDNAME" : "Fjord"
 				}
+		},
+		{
+			"name" : "Yulakia",
+			"class" : "yulakia",
+			"path" : "./Islands/Yulakia/",
+			"replace" :
+				{
+				"ISLAND" : "Yulakia",
+				"ISLANDNAME" : "Yulakia"
+				}
 		}
 	],
 	"Missions" : [
@@ -666,6 +676,13 @@
         {
 			"island" : "Fjord",
 			"sqm": "Fjord",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+        {
+			"island" : "Yulakia",
+			"sqm": "Yulakia",
 			"mod" : "Vanilla",
 			"replace" : {},
 			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
