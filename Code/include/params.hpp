@@ -36,7 +36,7 @@ class Params
 		values[]={2,4,6,8,-1,-2,-3};
 		texts[]={"Few (2-3)", "Some (3-5)", "Large (5-7)", "Max (7-9)","Players 1:0.5","Players 1:1","Players 1:1.5"};
 		livechanges = 1;
-		default = -3;
+		default = -2;
 	};
 	class A3E_Param_EnemySpawnDistance
 	{
