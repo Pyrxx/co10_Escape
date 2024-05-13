@@ -52,6 +52,7 @@ This variant of [co10_escape](https://github.com/NeoArmageddon/co10_Escape) prim
 * [Rosche](https://steamcommunity.com/sharedfiles/filedetails/?id=1527410521)
 * [Ruha](https://steamcommunity.com/sharedfiles/filedetails/?id=1368857262)
 * [Sahatra](https://steamcommunity.com/sharedfiles/filedetails/?id=3019928771)
+* [Sumava](https://steamcommunity.com/workshop/filedetails/?id=2947655994)
 * [Takistan](https://steamcommunity.com/sharedfiles/filedetails/?id=583544987)
 * [Tembelan](https://steamcommunity.com/sharedfiles/filedetails/?id=1252091296)
 * [Vidda](https://steamcommunity.com/sharedfiles/filedetails/?id=1282716647)
