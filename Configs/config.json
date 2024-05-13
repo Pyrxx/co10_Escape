@@ -439,6 +439,16 @@
 				"ISLAND" : "Yulakia",
 				"ISLANDNAME" : "Yulakia"
 				}
+		},
+		{
+			"name" : "Sumava",
+			"class" : "brf_sumava",
+			"path" : "./Islands/Sumava/",
+			"replace" :
+				{
+				"ISLAND" : "Sumava",
+				"ISLANDNAME" : "Sumava"
+				}
 		}
 	],
 	"Missions" : [
@@ -630,6 +640,13 @@
 			"mod" : "Vanilla Apex",
 			"replace" : {},
 			"name" : "co10_Escape_APEX_NATO_vs_CSAT"
+		},
+        {
+			"island" : "Sumava",
+			"sqm": "Sumava",
+			"mod" : "Vanilla Contact US",
+			"replace" : {},
+			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
 		},
         {
 			"island" : "Livonia",
