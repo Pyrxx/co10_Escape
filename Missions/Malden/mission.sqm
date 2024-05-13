@@ -95,7 +95,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}";
+		briefingName="{* MISSION *} {* ISLANDNAME *} {* VERSION *}";
 		startWeather=0.099999994;
 		startWind=0.099999994;
 		startWaves=0.099999994;

@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=235;
+		nextID=227;
 	};
 	class MarkerIDProvider
 	{
@@ -107,7 +107,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}";
+		briefingName="{* MISSION *} {* ISLANDNAME *} {* VERSION *}";
 		startWeather=0.099999994;
 		startWind=0.099999994;
 		startWaves=0.099999994;
@@ -116,7 +116,7 @@ class Mission
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
 		year=2019;
-		month=6;
+		month=8;
 		day=27;
 		hour=15;
 		startFogDecay=0.013;
@@ -124,7 +124,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=91;
+		items=83;
 		class Item0
 		{
 			dataType="Marker";
@@ -1217,141 +1217,6 @@ class Mission
 			angle=278.64587;
 			id=226;
 			atlOffset=1.6775856;
-		};
-		class Item83
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7936.0093,46.881893,6287.8921};
-				angles[]={6.2731905,2.6516025,0.012496647};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=227;
-			type="C_Kart_01_F";
-			atlOffset=3.8146973e-006;
-		};
-		class Item84
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7938.1211,46.885311,6289.0845};
-				angles[]={0.0024897563,2.5653243,0.0024897563};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=228;
-			type="C_Kart_01_Blu_F";
-		};
-		class Item85
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7940.9805,46.994835,6290.7461};
-				angles[]={6.2506957,2.6588144,0.012501417};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=229;
-			type="C_Kart_01_Fuel_F";
-			atlOffset=-1.9073486e-005;
-		};
-		class Item86
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7943.2852,46.972206,6291.7251};
-				angles[]={6.278194,2.6700084,6.268187};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=230;
-			type="C_Kart_01_Red_F";
-			atlOffset=1.5258789e-005;
-		};
-		class Item87
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={8001.2061,47.752548,6352.7339};
-				angles[]={6.2806959,4.8891096,6.2731848};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=231;
-			type="C_Kart_01_Vrana_F";
-			atlOffset=3.8146973e-006;
-		};
-		class Item88
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={8000.3491,47.743927,6350.2896};
-				angles[]={6.2731848,4.965302,6.278194};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=232;
-			type="C_Kart_01_F";
-			atlOffset=-3.8146973e-006;
-		};
-		class Item89
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7999.7275,47.731342,6347.2202};
-				angles[]={6.278182,5.024858,6.2407117};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=233;
-			type="C_Kart_01_Blu_F";
-			atlOffset=-2.2888184e-005;
-		};
-		class Item90
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={7999.2158,47.741795,6344.96};
-				angles[]={6.278182,5.0397964,6.2407117};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=234;
-			type="C_Kart_01_Red_F";
-			atlOffset=-1.9073486e-005;
 		};
 	};
 };

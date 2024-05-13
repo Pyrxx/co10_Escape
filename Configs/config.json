@@ -6,13 +6,14 @@
 	"cpbo" : "S:\\ArmA3Work\\Tools\\cpbo\\cpbo.exe",
 	"Subconfigs": [
 		"./Configs/subconfig_example.json"
-	],
+		],
 	"replace" :
 		{
-			"VERSION" : "DEV Build",
+			"VERSION" : "1.10 e21ea3f 24-05-02",
 			"MISSION" : "Escape",
 			"MISSION_FULL": "Aldalon | co10 Escape",
-			"PLAYER_INIT" : "this setCaptive true; if(local this) then {{this unlinkItem _x;} forEach ['ItemMap','itemGPS','B_UavTerminal'];};"
+			"PLAYER_INIT" : "this setCaptive true; if(local this) then {{this unlinkItem _x;} forEach ['ItemMap','itemGPS','B_UavTerminal'];};",
+			"GAMETYPE" : "Escape"
 		},
 	"ParsedFiles" : ["mission.sqm","defines.hpp","fn_briefing.sqf"],
 	"Mods" : [
@@ -73,29 +74,10 @@
                     "PLAYERUNIT_7" : "O_R_medic_F",
                     "PLAYERUNIT_8" : "O_R_Patrol_Soldier_Engineer_F",
                     "PLAYERUNIT_9" : "O_R_medic_F",
-                    "PLAYERUNIT_10" : "O_R_Patrol_Soldier_Engineer_F"
+                    "PLAYERUNIT_10" : "O_R_Patrol_Soldier_Engineer_F",
+					"PLAYER_INIT" : "this setCaptive true; if(this == p8) then {this setUnitTrait ['UavHacker',true];};"
                 }
-        },
-		{
-			"name" : "Winter",
-			"path" : "./Mods/Winter/",
-			"require" : ["NATO_Winter_Units"],
-			"replace" :
-				{
-					"MOD" : "Winter NATO vs CSAT",
-					"PLAYERSIDE" : "WEST",
-					"PLAYERUNIT_1" : "NATO_WINTER_SOLDIER_MEDIC",
-					"PLAYERUNIT_2" : "NATO_WINTER_SOLDIER_ENGINEER",
-					"PLAYERUNIT_3" : "NATO_WINTER_SOLDIER_MEDIC",
-					"PLAYERUNIT_4" : "NATO_WINTER_SOLDIER_ENGINEER",
-					"PLAYERUNIT_5" : "NATO_WINTER_SOLDIER_MEDIC",
-					"PLAYERUNIT_6" : "NATO_WINTER_SOLDIER_ENGINEER",
-					"PLAYERUNIT_7" : "NATO_WINTER_SOLDIER_MEDIC",
-					"PLAYERUNIT_8" : "NATO_WINTER_SOLDIER_ENGINEER",
-					"PLAYERUNIT_9" : "NATO_WINTER_SOLDIER_MEDIC",
-					"PLAYERUNIT_10" : "NATO_WINTER_SOLDIER_ENGINEER"
-				}
-		}
+        }
 	],
 	"Islands": [
 		{
@@ -178,6 +160,26 @@
 				"ISLANDNAME" : "Gabreta"
 				}
 		},
+		{
+			"name" : "Polanek",
+			"class" : "zdanice",
+			"path" : "./Islands/Polanek/",
+			"replace" :
+				{
+				"ISLAND" : "zdanice",
+				"ISLANDNAME" : "Polanek"
+				}
+		},
+		{
+			"name" : "Sefrou-Ramal",
+			"class" : "SefrouRamal",
+			"path" : "./Islands/Sefrou-Ramal/",
+			"replace" :
+				{
+				"ISLAND" : "Sefrou-Ramal",
+				"ISLANDNAME" : "Sefrou-Ramal"
+				}
+		},
         {
 			"name" : "Chernarus_2020",
 			"class" : "CUP_Chernarus_A3",
@@ -189,26 +191,6 @@
 				}
 		},
 		{
-			"name" : "Lingor",
-			"class" : "Lingor3",
-			"path" : "./Islands/Lingor3/",
-			"replace" :
-				{
-				"ISLAND" : "Lingor",
-				"ISLANDNAME" : "Lingor"
-				}
-		},
-		{
-			"name" : "Dingor",
-			"class" : "Dingor",
-			"path" : "./Islands/Dingor/",
-			"replace" :
-				{
-				"ISLAND" : "Dingor",
-				"ISLANDNAME" : "Dingor"
-				}
-		},
-		{
 			"name" : "Takistan",
 			"class" : "Takistan",
 			"path" : "./Islands/Takistan/",
@@ -216,6 +198,16 @@
 				{
 				"ISLAND" : "Takistan",
 				"ISLANDNAME" : "Takistan"
+				}
+		},
+		{
+			"name" : "Lythium",
+			"class" : "Lythium",
+			"path" : "./Islands/Lythium/",
+			"replace" :
+				{
+				"ISLAND" : "Lythium",
+				"ISLANDNAME" : "Lythium"
 				}
 		},
 		{
@@ -236,6 +228,16 @@
 				{
 				"ISLAND" : "Rosche",
 				"ISLANDNAME" : "Rosche"
+				}
+		},
+		{
+			"name" : "Kerama",
+			"class" : "Kerama",
+			"path" : "./Islands/Kerama/",
+			"replace" :
+				{
+				"ISLAND" : "Kerama",
+				"ISLANDNAME" : "Kerama"
 				}
 		},
 		{
@@ -298,6 +300,26 @@
 				"ISLANDNAME" : "Anizay"
 				}
 		},
+        {
+			"name" : "Cham",
+			"class" : "tem_cham",
+			"path" : "./Islands/Cham/",
+			"replace" :
+				{
+				"ISLAND" : "Cham",
+				"ISLANDNAME" : "Cham"
+				}
+		},
+        {
+			"name" : "ChamW",
+			"class" : "tem_chamw",
+			"path" : "./Islands/Chamw/",
+			"replace" :
+				{
+				"ISLAND" : "Cham",
+				"ISLANDNAME" : "Cham"
+				}
+		},
 		{
 			"name" : "Hellanmaa",
 			"class" : "hellanmaa",
@@ -317,6 +339,96 @@
 				"ISLAND" : "Hellanmaa",
 				"ISLANDNAME" : "Hellanmaa"
 				}
+		},
+        {
+			"name" : "Colombia",
+			"class" : "UMB_Colombia",
+			"path" : "./Islands/UMB_Colombia/",
+			"replace" :
+				{
+				"ISLAND" : "Colombia",
+				"ISLANDNAME" : "Colombia"
+				}
+		},
+        {
+			"name" : "Niakala",
+			"class" : "juju_kalahari",
+			"path" : "./Islands/Niakala/",
+			"replace" :
+				{
+				"ISLAND" : "Niakala",
+				"ISLANDNAME" : "Niakala"
+				}
+		},
+        {
+			"name" : "Maksniemi",
+			"class" : "Maksniemi",
+			"path" : "./Islands/Maksniemi/",
+			"replace" :
+				{
+				"ISLAND" : "Maksniemi",
+				"ISLANDNAME" : "Maksniemi"
+				}
+		},
+		        {
+			"name" : "Gulfcoast",
+			"class" : "Gulfcoast",
+			"path" : "./Islands/Gulfcoast/",
+			"replace" :
+				{
+				"ISLAND" : "Gulfcoast",
+				"ISLANDNAME" : "Gulfcoast"
+				}
+		},
+		{
+			"name" : "Lybor",
+			"class" : "VTF_Lybor",
+			"path" : "./Islands/Lybor/",
+			"replace" :
+				{
+				"ISLAND" : "Lybor",
+				"ISLANDNAME" : "Lybor"
+				}
+		},
+		{
+			"name" : "IslaPera",
+			"class" : "IslaPera",
+			"path" : "./Islands/IslaPera/",
+			"replace" :
+				{
+				"ISLAND" : "IslaPera",
+				"ISLANDNAME" : "IslaPera"
+				}
+		},
+		{
+			"name" : "Farabad",
+			"class" : "Farabad",
+			"path" : "./Islands/Farabad/",
+			"replace" :
+				{
+				"ISLAND" : "Farabad",
+				"ISLANDNAME" : "Farabad"
+				}
+		},
+		{
+			"name" : "Sahatra",
+			"class" : "juju_sahatra",
+			"path" : "./Islands/Sahatra/",
+			"replace" :
+				{
+				"ISLAND" : "Sahatra",
+				"ISLANDNAME" : "Sahatra"
+				}
+		},
+		{
+			"name" : "Fjord",
+			"class" : "go_map_fjord",
+			"path" : "./Islands/Fjord/",
+			"replace" :
+				{
+				"ISLAND" : "Fjord",
+				"ISLANDNAME" : "Fjord"
+				}
 		}
 	],
 	"Missions" : [
@@ -325,202 +437,253 @@
 			"sqm": "Altis",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
-		},
-		{
-			"island" : "Altis",
-			"sqm": "Altis",
-			"mod" : "Winter",
-			"replace" : {},
-			"name" : "_Winter_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Stratis",
 			"sqm": "Stratis",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
-		},
-		{
-			"island" : "Stratis",
-			"sqm": "Stratis",
-			"mod" : "Winter",
-			"replace" : {},
-			"name" : "_Winter_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Tanoa",
 			"sqm": "Tanoa",
 			"mod" : "Vanilla Apex",
 			"replace" : {},
-			"name" : "_APEX_SMA"
+			"name" : "co10_Escape_APEX_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Malden 2035",
 			"sqm": "Malden",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
         {
 			"island" : "Weferlingen",
 			"sqm" : "Weferlingen",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
         {
 			"island" : "WeferlingenWinter",
 			"sqm" : "WeferlingenW",
-			"mod" : "Winter",
+			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_Winter_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Gabreta",
 			"sqm" : "Gabreta",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+		{
+			"island" : "Polanek",
+			"sqm" : "Polanek",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+		{
+			"island" : "Sefrou-Ramal",
+			"sqm" : "Sefrou-Ramal",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
         {
 			"island" : "Chernarus_2020",
 			"sqm": "Chernarus_2020",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
-		},
-		{
-			"island" : "Lingor",
-			"sqm": "Lingor3",
-			"mod" : "Vanilla Apex",
-			"replace" : {},
-			"name" : "_APEX_SMA"
-		},
-		{
-			"island" : "Dingor",
-			"sqm": "Dingor",
-			"mod" : "Vanilla",
-			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Takistan",
 			"sqm": "Takistan",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+		{
+			"island" : "Lythium",
+			"sqm": "Lythium",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Esseker",
 			"sqm": "Esseker",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Rosche",
 			"sqm": "Rosche",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+		{
+			"island" : "Kerama",
+			"sqm": "Kerama",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Virolahti",
 			"sqm": "VT7",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Ruha",
 			"sqm": "Ruha",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Tembelan",
 			"sqm": "Tembelan",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Kujari",
 			"sqm": "Kujari",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Vidda",
 			"sqm": "blud_vidda",
-			"mod" : "Winter",
+			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_Winter_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Anizay",
 			"sqm": "tem_anizay",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+        {
+			"island" : "Cham",
+			"sqm": "Cham",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+        {
+			"island" : "ChamW",
+			"sqm": "ChamW",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
 		{
 			"island" : "Hellanmaa",
 			"sqm": "Hellanmaa",
 			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
         {
 			"island" : "HellanmaaW",
 			"sqm": "HellanmaaW",
-			"mod" : "Winter",
+			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_Winter_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+		{
+			"island" : "Colombia",
+			"sqm": "UMB_Colombia",
+			"mod" : "Vanilla Apex",
+			"replace" : {},
+			"name" : "co10_Escape_APEX_NATO_vs_CSAT"
+		},
+		{
+			"island" : "Niakala",
+			"sqm": "Niakala",
+			"mod" : "Vanilla Apex",
+			"replace" : {},
+			"name" : "co10_Escape_APEX_NATO_vs_CSAT"
 		},
         {
 			"island" : "Livonia",
 			"sqm" : "Enoch",
 			"mod" : "Vanilla Contact US",
 			"replace" : {},
-			"name" : "_Contact_SMA"
+			"name" : "co10_Escape_Contact_CSAT_vs_NATO"
 		},
         {
-			"island" : "Ruha",
-			"sqm": "Ruha",
-			"mod" : "Vanilla Contact US",
+			"island" : "Maksniemi",
+			"sqm": "Maksniemi",
+			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_Contact_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		},
         {
-			"island" : "Hellanmaa",
-			"sqm": "Hellanmaa",
-			"mod" : "Vanilla Contact US",
+			"island" : "Gulfcoast",
+			"sqm": "Gulfcoast",
+			"mod" : "Vanilla",
 			"replace" : {},
-			"name" : "_Contact_SMA"
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+        {
+			"island" : "Lybor",
+			"sqm": "Lybor",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+        {
+			"island" : "IslaPera",
+			"sqm": "IslaPera",
+			"mod" : "Vanilla Apex",
+			"replace" : {},
+			"name" : "co10_Escape_APEX_NATO_vs_CSAT"
+		},
+        {
+			"island" : "Sahatra",
+			"sqm": "Sahatra",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
+		},
+        {
+			"island" : "Fjord",
+			"sqm": "Fjord",
+			"mod" : "Vanilla",
+			"replace" : {},
+			"name" : "co10_Escape_BIS_NATO_vs_CSAT"
 		}
 	],
 	"Addons" : [
 		{
 			"name" : "Vanilla",
-			"mods" : ["Vanilla"]
+			"mods" : ["Vanilla","Vanilla US"]
 		},
 		{
 			"name" : "Apex",
-			"mods" : ["Vanilla Apex"]
+			"mods" : ["Vanilla Apex","Vanilla Apex US"]
 		}
 		,
 		{
 			"name" : "Contact",
 			"mods" : ["Vanilla Contact US"]
-		}
-		,
-		{
-			"name" : "Winter",
-			"mods" : ["Winter"]
 		}
 	]
 	

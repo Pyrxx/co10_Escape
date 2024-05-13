@@ -20,6 +20,23 @@ A3E_VAR_Side_Blufor_Str = format["%1",A3E_VAR_Side_Blufor];
 A3E_VAR_Side_Opfor_Str = format["%1",A3E_VAR_Side_Opfor];
 A3E_VAR_Side_Ind_Str = format["%1",A3E_VAR_Side_Ind];
 
+A3E_Var_AllowVanillaNightVision = true;
+
+A3E_MapItemsUsedInMission = ["ItemMap"]; //MapItems that should be removed from guards and are allowed to be carried randomly by patrols
+A3E_ItemsToBeRemoved = ["ItemCompass"]; //Items to randomly remove from units and to remove from guards
+
+//////////////////////////////////////////////////////////////////
+// fn_createStartPos.sqf
+// Array of templates to use for prisons
+//////////////////////////////////////////////////////////////////
+A3E_PrisonTemplates = [
+	"a3e_fnc_BuildPrison"
+	,"a3e_fnc_BuildPrison1"
+	,"a3e_fnc_BuildPrison2"
+	,"a3e_fnc_BuildPrison3"
+	,"a3e_fnc_BuildPrison4"
+	,"a3e_fnc_BuildPrison5"
+	];
 // Random array. Start position guard types around the prison
 a3e_arr_Escape_StartPositionGuardTypes = [
 	"I_Soldier_AR_F",
@@ -30,14 +47,17 @@ a3e_arr_Escape_StartPositionGuardTypes = [
 // Prison backpack secondary weapon (and corresponding magazine type).
 a3e_arr_PrisonBackpackWeapons = [];
 //Pistols
-a3e_arr_PrisonBackpackWeapons pushback ["hgun_ACPC2_snds_F","9Rnd_45ACP_Mag"];
 a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_snds_F","30Rnd_9x21_Mag"];
+a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_snds_F","30Rnd_9x21_Mag"];
+a3e_arr_PrisonBackpackWeapons pushback ["hgun_Rook40_snds_F","30Rnd_9x21_Mag"];
+a3e_arr_PrisonBackpackWeapons pushback ["hgun_Pistol_heavy_02_Yorris_F","6Rnd_45ACP_Cylinder"];
+a3e_arr_PrisonBackpackWeapons pushback ["hgun_Pistol_heavy_02_Yorris_F","6Rnd_45ACP_Cylinder"];
 a3e_arr_PrisonBackpackWeapons pushback ["hgun_Pistol_heavy_02_Yorris_F","6Rnd_45ACP_Cylinder"];
 //SMGs
 a3e_arr_PrisonBackpackWeapons pushback ["hgun_PDW2000_F","30Rnd_9x21_Mag"];
+a3e_arr_PrisonBackpackWeapons pushback ["hgun_PDW2000_F","30Rnd_9x21_Mag"];
 a3e_arr_PrisonBackpackWeapons pushback ["SMG_05_F", "30Rnd_9x21_Mag_SMG_02"];
-a3e_arr_PrisonBackpackWeapons pushback ["SMG_03_TR_black", "50Rnd_570x28_SMG_03"];
-a3e_arr_PrisonBackpackWeapons pushback ["SMG_01_F", "30Rnd_45ACP_Mag_SMG_01"];
+a3e_arr_PrisonBackpackWeapons pushback ["SMG_05_F", "30Rnd_9x21_Mag_SMG_02"];
 //Shotguns
 a3e_arr_PrisonBackpackWeapons pushback ["sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets"];
 a3e_arr_PrisonBackpackWeapons pushback ["sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets"];
@@ -658,8 +678,6 @@ a3e_arr_Escape_InfantryTypes = [
 	,"O_Soldier_M_F"
 	,"O_Soldier_repair_F"
 	,"O_officer_F"
-    ,"O_ghillie_lsh_F"
-    ,"O_ghillie_sard_F"
 	,"O_soldier_UAV_F"
 	,"O_soldier_UAV_F"
 	,"O_Soldier_AAR_F"
@@ -673,7 +691,9 @@ a3e_arr_Escape_InfantryTypes = [
 	,"O_Soldier_AHAT_F"
 	,"O_Soldier_HAT_F"
 	,"O_Soldier_SL_F"
-	,"O_Soldier_TL_F"];
+	,"O_Soldier_TL_F"
+	,"O_ghillie_lsh_F"
+    ,"O_ghillie_sard_F"];
 	if(A3E_Param_UseDLCMarksmen==1) then {
 		a3e_arr_Escape_InfantryTypes pushback "O_HeavyGunner_F";
 		a3e_arr_Escape_InfantryTypes pushback "O_Pathfinder_F";
@@ -730,7 +750,7 @@ a3e_arr_Escape_InfantryTypes_Ind = [
 	,"I_Soldier_LAT2_F"
 	,"I_Soldier_LAT2_F"
 	,"I_Spotter_F"
-    ,"I_ghillie_lsh_F"
+	,"I_ghillie_lsh_F"
     ,"I_ghillie_sard_F"
 	,"I_Soldier_SL_F"
 	,"I_Soldier_TL_F"];
@@ -775,6 +795,187 @@ a3e_arr_recon_I_InfantryTypes = [
 	,"I_G_Soldier_F"
 	,"I_G_Soldier_LAT2_F"];
 
+a3e_units_civilian_InfantryTypes = [
+	"C_man_p_beggar_F"		//Men
+	,"C_man_1"
+	,"C_Man_casual_4_v2_F"
+	,"C_Man_casual_5_v2_F"
+	,"C_Man_casual_6_v2_F"
+	,"C_Man_casual_7_F"
+	,"C_Man_casual_8_F"
+	,"C_Man_casual_9_F"
+	,"C_Man_formal_1_F"
+	,"C_Man_formal_2_F"
+	,"C_Man_formal_3_F"
+	,"C_Man_formal_4_F"
+	,"C_Man_smart_casual_1_F"
+	,"C_Man_smart_casual_2_F"
+	,"C_man_polo_1_F"
+	,"C_man_polo_2_F"
+	,"C_man_polo_3_F"
+	,"C_man_polo_4_F"
+	,"C_man_polo_5_F"
+	,"C_man_polo_6_F"
+	,"C_man_shorts_1_F"
+	,"C_man_1_1_F"
+	,"C_man_1_2_F"
+	,"C_man_1_3_F"
+	,"C_man_p_fugitive_F"
+	,"C_man_p_shorts_1_F"
+	,"C_man_hunter_1_F"
+	,"C_man_shorts_2_F"
+	,"C_man_shorts_3_F"
+	,"C_man_shorts_4_F"
+	,"C_man_p_beggar_F_afro"		//Men Africans
+	,"C_Man_casual_4_v2_F_afro"
+	,"C_Man_casual_5_v2_F_afro"
+	,"C_Man_casual_6_v2_F_afro"
+	,"C_Man_casual_7_F_afro"
+	,"C_Man_casual_8_F_afro"
+	,"C_Man_casual_9_F_afro"
+	,"C_Man_formal_1_F_afro"
+	,"C_Man_formal_2_F_afro"
+	,"C_Man_formal_3_F_afro"
+	,"C_Man_formal_4_F_afro"
+	,"C_Man_smart_casual_1_F_afro"
+	,"C_Man_smart_casual_2_F_afro"
+	,"C_man_polo_1_F_afro"
+	,"C_man_polo_2_F_afro"
+	,"C_man_polo_3_F_afro"
+	,"C_man_polo_4_F_afro"
+	,"C_man_polo_5_F_afro"
+	,"C_man_polo_6_F_afro"
+	,"C_man_shorts_1_F_afro"
+	,"C_man_p_fugitive_F_afro"
+	,"C_man_p_shorts_1_F_afro"
+	,"C_man_shorts_2_F_afro"
+	,"C_man_shorts_3_F_afro"
+	,"C_man_shorts_4_F_afro"
+	,"C_man_p_beggar_F_asia"			//Men Asians
+	,"C_Man_casual_4_v2_F_asia"
+	,"C_Man_casual_5_v2_F_asia"
+	,"C_Man_casual_6_v2_F_asia"
+	,"C_Man_casual_7_F_asia"
+	,"C_Man_casual_8_F_asia"
+	,"C_Man_casual_9_F_asia"
+	,"C_Man_formal_1_F_asia"
+	,"C_Man_formal_2_F_asia"
+	,"C_Man_formal_3_F_asia"
+	,"C_Man_formal_4_F_asia"
+	,"C_Man_smart_casual_1_F_asia"
+	,"C_Man_smart_casual_2_F_asia"
+	,"C_man_polo_1_F_asia"
+	,"C_man_polo_2_F_asia"
+	,"C_man_polo_3_F_asia"
+	,"C_man_polo_4_F_asia"
+	,"C_man_polo_5_F_asia"
+	,"C_man_polo_6_F_asia"
+	,"C_man_shorts_1_F_asia"
+	,"C_man_p_fugitive_F_asia"
+	,"C_man_p_shorts_1_F_asia"
+	,"C_man_shorts_2_F_asia"
+	,"C_man_shorts_3_F_asia"
+	,"C_man_shorts_4_F_asia"
+	,"C_man_p_beggar_F_euro"				//Men Europeans
+	,"C_Man_casual_4_v2_F_euro"
+	,"C_Man_casual_5_v2_F_euro"
+	,"C_Man_casual_6_v2_F_euro"
+	,"C_Man_casual_7_F_euro"
+	,"C_Man_casual_8_F_euro"
+	,"C_Man_casual_9_F_euro"
+	,"C_Man_formal_1_F_euro"
+	,"C_Man_formal_2_F_euro"
+	,"C_Man_formal_3_F_euro"
+	,"C_Man_formal_4_F_euro"
+	,"C_Man_smart_casual_1_F_euro"
+	,"C_Man_smart_casual_2_F_euro"
+	,"C_man_polo_1_F_euro"
+	,"C_man_polo_2_F_euro"
+	,"C_man_polo_3_F_euro"
+	,"C_man_polo_4_F_euro"
+	,"C_man_polo_5_F_euro"
+	,"C_man_polo_6_F_euro"
+	,"C_man_shorts_1_F_euro"
+	,"C_man_p_fugitive_F_euro"
+	,"C_man_p_shorts_1_F_euro"
+	,"C_man_shorts_2_F_euro"
+	,"C_man_shorts_3_F_euro"
+	,"C_man_shorts_4_F_euro"];
+	if(A3E_Param_UseDLCApex==1) then {
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_1_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_2_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_3_F";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_1_F";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_2_F";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_3_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_4_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_5_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_6_F";
+	};
+	if(A3E_Param_UseDLCLaws==1) then {
+		a3e_arr_recon_InfantryTypes pushback "C_Man_ConstructionWorker_01_Black_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_ConstructionWorker_01_Blue_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_ConstructionWorker_01_Red_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_ConstructionWorker_01_Vrana_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_Fisherman_01_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_Messenger_01_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_UtilityWorker_01_F";
+	};
+	if(A3E_Param_UseDLCContact==1) then {
+		a3e_arr_recon_InfantryTypes pushback "C_Man_1_enoch_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_2_enoch_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_3_enoch_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_4_enoch_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_5_enoch_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_6_enoch_F";
+		a3e_arr_recon_InfantryTypes pushback "C_Farmer_01_enoch_F";
+		a3e_arr_recon_InfantryTypes pushback "C_scientist_01_formal_F";
+		a3e_arr_recon_InfantryTypes pushback "C_scientist_02_formal_F";
+		a3e_arr_recon_InfantryTypes pushback "C_scientist_01_informal_F";
+		a3e_arr_recon_InfantryTypes pushback "C_scientist_02_informal_F";
+	};
+	if(A3E_Param_UseDLCApex==1) then {				//Men Africans
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_1_F_afro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_2_F_afro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_3_F_afro";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_1_F_afro";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_2_F_afro";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_3_F_afro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_4_F_afro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_5_F_afro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_6_F_afro";
+	};
+	if(A3E_Param_UseDLCApex==1) then {				//Men Asions
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_1_F_asia";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_2_F_asia";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_3_F_asia";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_1_F_asia";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_2_F_asia";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_3_F_asia";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_4_F_asia";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_5_F_asia";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_6_F_asia";
+	};
+	if(A3E_Param_UseDLCApex==1) then {				//Men Europeans
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_1_F_euro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_2_F_euro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_3_F_euro";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_1_F_euro";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_2_F_euro";
+		a3e_arr_recon_InfantryTypes pushback "C_man_sport_3_F_euro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_4_F_euro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_5_F_euro";
+		a3e_arr_recon_InfantryTypes pushback "C_Man_casual_6_F_euro";
+	};
+
+//////////////////////////////////////////////////////////////////
+// fn_RoadBlocks.sqf
+// Array of templates to use for roadblocks
+//////////////////////////////////////////////////////////////////
+A3E_RoadblockTemplates = [
+	"rb_bis_rb1"
+	,"rb_bis_rb2"
+	,"rb_bis_rb3"];
 
 // Random array. A roadblock has a manned vehicle. This array contains possible manned vehicles (can be of any kind, like cars, armored and statics).
 a3e_arr_Escape_RoadBlock_MannedVehicleTypes = [
@@ -811,6 +1012,29 @@ a3e_arr_Escape_MotorizedSearchGroup_vehicleClasses = [
 	,"O_APC_Wheeled_02_rcws_F"
 	,"O_APC_Tracked_02_cannon_F"];
 
+
+//////////////////////////////////////////////////////////////////
+// fn_createMotorPools.sqf
+// Array of templates to use for motor pool
+//////////////////////////////////////////////////////////////////
+A3E_MotorPoolTemplates = [
+	"A3E_fnc_BuildMotorPool"
+	];
+
+// A communication center is guarded by vehicles depending on variable _enemyFrequency. 1 = a random light armor. 2 = a random heavy armor. 3 = a random 
+// light *and* a random heavy armor.
+
+//////////////////////////////////////////////////////////////////
+// fn_createComCenters.sqf
+// Array of templates to use for com centers
+//////////////////////////////////////////////////////////////////
+A3E_ComCenterTemplates = [
+	"a3e_fnc_BuildComCenter"
+	,"a3e_fnc_BuildComCenter2"
+	,"a3e_fnc_BuildComCenter3"
+	,"a3e_fnc_BuildComCenter4"
+	,"a3e_fnc_BuildComCenter5"
+	];
 
 // A communication center is guarded by vehicles depending on variable _enemyFrequency. 1 = a random light armor. 2 = a random heavy armor. 3 = a random 
 // light *and* a random heavy armor.
@@ -918,6 +1142,18 @@ a3e_arr_I_pilots = [
 	,"I_helicrew_F"];
 
 
+//////////////////////////////////////////////////////////////////
+// fn_createAmmoDepots.sqf
+// Array of templates to usefor ammo depots
+//////////////////////////////////////////////////////////////////
+A3E_AmmoDepotTemplates = [
+	"A3E_fnc_AmmoDepot"
+	,"A3E_fnc_AmmoDepot2"
+	,"A3E_fnc_AmmoDepot3"
+	,"A3E_fnc_AmmoDepot4"
+	,"A3E_fnc_AmmoDepot5"
+	];
+
 // The following arrays define weapons and ammo contained at the ammo depots
 // Index 0: Weapon classname.
 // Index 1: Weapon's probability of presence (in percent, 0-100).
@@ -929,224 +1165,38 @@ a3e_arr_I_pilots = [
 // Weapons and ammo in the basic weapons box
 a3e_arr_AmmoDepotBasicWeapons = [];
 // CSAT weapons
-a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_03_F", 5, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_03_F", 5, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_03_F", 5, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["sma_minimi_mk3_762tlb", 5, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["sma_minimi_mk3_762tlb_des", 5, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["sma_minimi_mk3_762tlb_wdl", 5, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["MMG_01_hex_F", 5, 1, 3, ["150Rnd_93x64_Mag"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["MMG_01_tan_F", 5, 1, 3, ["150Rnd_93x64_Mag"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["MMG_02_black_F", 5, 1, 3, ["130Rnd_338_Mag"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["MMG_02_sand_F", 5, 1, 3, ["130Rnd_338_Mag"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_CTARS_blk_F", 5, 1, 3, ["100Rnd_580x42_Mag_Tracer_F"], 7];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_CTARS_hex_F", 5, 1, 3, ["100Rnd_580x42_hex_Mag_Tracer_F"], 7];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_CTARS_ghex_F", 5, 1, 3, ["100Rnd_580x42_ghex_Mag_Tracer_F"], 7];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_RPK12_F", 5, 1, 3, ["75rnd_762x39_AK12_Mag_Tracer_F"], 8];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_RPK12_arid_F", 5, 1, 3, ["75rnd_762x39_AK12_Arid_Mag_Tracer_F"], 8];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_RPK12_lush_F", 5, 1, 3, ["75rnd_762x39_AK12_Lush_Mag_Tracer_F"], 8];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRREMMOE", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRREMMOEblk", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRREMGL", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRREMGL_B", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_L85RIS", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_L85RISNR", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_M4MOE", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_M4MOE_OD", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_M4MOE_Tan", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_M4_GL", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_STG_E4_OD_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_STG_E4_BLACK_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Steyr_AUG_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Steyr_AUG_BLACK_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_MK16", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Mk16_black", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Mk16_Green", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Mk16_EGLM", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_ARX_blk_F", 10, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_ARX_ghex_F", 10, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_ARX_hex_F", 10, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_03_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_03_khaki_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_03_woodland_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_03_blk_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_03_khk_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_03_snd_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Mk17_16", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Mk17_16_black", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Mk17_16_Green", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Mk17_EGLM", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_02_F", 5, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_02_camo_F", 5, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_02_sniper_F", 5, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_GM6_F", 10, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_GM6_ghex_F", 10, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_GM6_camo_F", 10, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
+a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_03_F", 15, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
+a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_SKS_TAN_F", 15, 1, 3, ["SMA_30Rnd_762x39_7n23_AP_Red","SMA_30Rnd_762x39_SKS_FMJ_Red"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_AAC_MPW_16_Tan", 15, 1, 3, ["SMA_30Rnd_762x35_BLK_EPR"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRGL", 15, 1, 3, ["SMA_30Rnd_556x45_M855A1_Tracer","1Rnd_HE_Grenade_shell"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_07_hex_F", 15, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK417_16in", 15, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_04_Tan_F", 15, 1, 3, ["10Rnd_127x54_Mag"], 12];
 // non-CSAT weapons
-a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_Mk200_F", 5, 1, 3, ["200Rnd_65x39_cased_Box_Tracer"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_Mk200_F", 5, 1, 3, ["200Rnd_65x39_cased_Box_Tracer"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_02_blk_F", 5, 1, 3, ["150Rnd_556x45_Drum_Mag_Tracer_F"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_02_khk_F", 5, 1, 3, ["150Rnd_556x45_Drum_Green_Mag_Tracer_F"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_02_snd_F", 5, 1, 3, ["150Rnd_556x45_Drum_Sand_Mag_Tracer_F"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_Zafir_F", 5, 1, 3, ["150Rnd_762x54_Box_Tracer"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["LMG_Zafir_F", 5, 1, 3, ["150Rnd_762x54_Box_Tracer"], 5];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_MXM_F", 5, 1, 3, ["100Rnd_65x39_caseless_mag_Tracer"], 7];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_MXM_Black_F", 5, 1, 3, ["100Rnd_65x39_caseless_black_mag_tracer"], 7];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_MXM_khk_F", 5, 1, 3, ["100Rnd_65x39_caseless_khaki_mag_tracer"], 7];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_AK12_GL_F", 5, 1, 3, ["75Rnd_762x39_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_AK12_GL_arid_F", 5, 1, 3, ["75rnd_762x39_AK12_Arid_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_AK12_GL_lush_F", 5, 1, 3, ["75rnd_762x39_AK12_Lush_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMG_03_TR_black", 5, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMG_03_TR_camo", 5, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMG_03_TR_hex", 5, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMG_03_TR_khaki", 5, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRMOE_Blk", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRMOE", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRGL_B", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRGL", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK416CUSTOMvfgB", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK416CUSTOMvfg", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK416CUSTOMvfgODP", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK416GLOD", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_MK18MOETAN", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_MK18MOEOD", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_MK18TANBLK_GL", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_MK18BLK_GL", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_SAR21_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_SAR21_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_Tavor_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_TavorBLK_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_TavorOD_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_MSBS65_UBS_F", 5, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_MSBS65_UBS_black_F", 5, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_MSBS65_UBS_camo_F", 5, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_MSBS65_UBS_sand_F", 5, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_07_blk_F", 5, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_07_hex_F", 5, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_07_ghex_F", 5, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_06_camo_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_06_hunter_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_06_olive_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK417_16in", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK417_16in", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_HK417_16in", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_05_blk_F", 5, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_05_hex_f", 5, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_05_tan_f", 5, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_LRR_F", 5, 1, 3, ["7Rnd_408_Mag"], 14];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_LRR_camo_F", 5, 1, 3, ["7Rnd_408_Mag"], 14];
-a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_LRR_tna_F", 5, 1, 3, ["7Rnd_408_Mag"], 14];
+a3e_arr_AmmoDepotBasicWeapons pushback ["sma_minimi_mk3_762tlb_des", 15, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
+a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_02_snd_F", 15, 1, 3, ["150Rnd_556x45_Drum_Mag_Tracer_F"], 5];
+a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_ARX_hex_F", 15, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["SMA_ACRREMGL_B", 15, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer","1Rnd_HE_Grenade_shell"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_MSBS65_UBS_camo_F", 15, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Slug"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["arifle_SPAR_03_snd_F", 15, 1, 3, ["20Rnd_762x51_Mag"], 10];
+a3e_arr_AmmoDepotBasicWeapons pushback ["srifle_DMR_05_tan_f", 15, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
+
 
 // Weapons and ammo in the special weapons box
 a3e_arr_AmmoDepotSpecialWeapons = [];
 // CSAT weapons
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_03_F", 5, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_03_F", 5, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_03_F", 5, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["sma_minimi_mk3_762tlb", 5, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["sma_minimi_mk3_762tlb_des", 5, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["sma_minimi_mk3_762tlb_wdl", 5, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_01_hex_F", 5, 1, 3, ["150Rnd_93x64_Mag"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_01_tan_F", 5, 1, 3, ["150Rnd_93x64_Mag"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_02_black_F", 5, 1, 3, ["130Rnd_338_Mag"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_02_sand_F", 5, 1, 3, ["130Rnd_338_Mag"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_CTARS_blk_F", 5, 1, 3, ["100Rnd_580x42_Mag_Tracer_F"], 7];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_CTARS_hex_F", 5, 1, 3, ["100Rnd_580x42_hex_Mag_Tracer_F"], 7];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_CTARS_ghex_F", 5, 1, 3, ["100Rnd_580x42_ghex_Mag_Tracer_F"], 7];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_RPK12_F", 5, 1, 3, ["75rnd_762x39_AK12_Mag_Tracer_F"], 8];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_RPK12_arid_F", 5, 1, 3, ["75rnd_762x39_AK12_Arid_Mag_Tracer_F"], 8];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_RPK12_lush_F", 5, 1, 3, ["75rnd_762x39_AK12_Lush_Mag_Tracer_F"], 8];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_ACRREMMOE", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_ACRREMMOEblk", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_ACRREMGL", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_ACRREMGL_B", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_L85RIS", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_L85RISNR", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_M4MOE", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_M4MOE_OD", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_M4MOE_Tan", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_M4_GL", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_STG_E4_OD_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_STG_E4_BLACK_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Steyr_AUG_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Steyr_AUG_BLACK_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_MK16", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk16_black", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk16_Green", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk16_EGLM", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_ARX_blk_F", 10, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_ARX_ghex_F", 10, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_ARX_hex_F", 10, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_03_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_03_khaki_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_03_woodland_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_SPAR_03_blk_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_SPAR_03_khk_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_SPAR_03_snd_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk17_16", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk17_16_black", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk17_16_Green", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk17_EGLM", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_02_F", 5, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_02_camo_F", 5, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_02_sniper_F", 5, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_GM6_F", 10, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_GM6_ghex_F", 10, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_GM6_camo_F", 10, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
-// non-CSAT weapons
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Mk200_F", 5, 1, 3, ["200Rnd_65x39_cased_Box_Tracer"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Mk200_F", 5, 1, 3, ["200Rnd_65x39_cased_Box_Tracer"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_SPAR_02_blk_F", 5, 1, 3, ["150Rnd_556x45_Drum_Mag_Tracer_F"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_SPAR_02_khk_F", 5, 1, 3, ["150Rnd_556x45_Drum_Green_Mag_Tracer_F"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_SPAR_02_snd_F", 5, 1, 3, ["150Rnd_556x45_Drum_Sand_Mag_Tracer_F"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Zafir_F", 5, 1, 3, ["150Rnd_762x54_Box_Tracer"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Zafir_F", 5, 1, 3, ["150Rnd_762x54_Box_Tracer"], 5];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_MXM_F", 5, 1, 3, ["100Rnd_65x39_caseless_mag_Tracer"], 7];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_MXM_Black_F", 5, 1, 3, ["100Rnd_65x39_caseless_black_mag_tracer"], 7];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_MXM_khk_F", 5, 1, 3, ["100Rnd_65x39_caseless_khaki_mag_tracer"], 7];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_AK12_GL_F", 5, 1, 3, ["75Rnd_762x39_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_AK12_GL_arid_F", 5, 1, 3, ["75rnd_762x39_AK12_Arid_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_AK12_GL_lush_F", 5, 1, 3, ["75rnd_762x39_AK12_Lush_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMG_03_TR_black", 5, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMG_03_TR_camo", 5, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMG_03_TR_hex", 5, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMG_03_TR_khaki", 5, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_ACRMOE_Blk", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_ACRMOE", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_ACRGL_B", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_ACRGL", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_HK416CUSTOMvfgB", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_HK416CUSTOMvfg", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_HK416CUSTOMvfgODP", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_HK416GLOD", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_MK18MOETAN", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_MK18MOEOD", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_MK18TANBLK_GL", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_MK18BLK_GL", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_SAR21_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_SAR21_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Tavor_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_TavorBLK_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_TavorOD_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_MSBS65_UBS_F", 5, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_MSBS65_UBS_black_F", 5, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_MSBS65_UBS_camo_F", 5, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["arifle_MSBS65_UBS_sand_F", 5, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_07_blk_F", 5, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_07_hex_F", 5, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_07_ghex_F", 5, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_06_camo_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_06_hunter_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_06_olive_F", 5, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_HK417_16in", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_HK417_16in", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_HK417_16in", 10, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_05_blk_F", 5, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_05_hex_f", 5, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_05_tan_f", 5, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_LRR_F", 5, 1, 3, ["7Rnd_408_Mag"], 14];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_LRR_camo_F", 5, 1, 3, ["7Rnd_408_Mag"], 14];
-a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_LRR_tna_F", 5, 1, 3, ["7Rnd_408_Mag"], 14];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Zafir_F", 15, 1, 3, ["150Rnd_762x54_Box_Tracer"], 5];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_01_tan_F", 15, 1, 3, ["150Rnd_93x64_Mag"], 5];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_EBR_F", 15, 1, 3, ["20Rnd_762x51_Mag"], 10];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_06_camo_F", 15, 1, 3, ["20Rnd_762x51_Mag"], 10];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_GM6_camo_F", 15, 1, 3, ["5Rnd_127x108_Mag"], 15];
+// non-CAST weapons
+a3e_arr_AmmoDepotSpecialWeapons pushback ["LMG_Mk200_F", 15, 1, 3, ["200Rnd_65x39_cased_Box_Tracer"], 6];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["MMG_02_sand_F", 15, 1, 3, ["130Rnd_338_Mag"], 5];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["SMA_Mk17_16", 15, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_03_tan_F", 15, 1, 3, ["20Rnd_762x51_Mag"], 10];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_DMR_02_sniper_F", 15, 1, 3, ["10Rnd_338_Mag"], 12];
+a3e_arr_AmmoDepotSpecialWeapons pushback ["srifle_LRR_camo_F", 15, 1, 3, ["7Rnd_408_Mag"], 14];
 
 // Weapons and ammo in the launchers box
 a3e_arr_AmmoDepotLaunchers = [];
@@ -1156,6 +1206,7 @@ a3e_arr_AmmoDepotLaunchers pushback ["launch_O_Titan_short_F", 50, 1, 1, ["Titan
 a3e_arr_AmmoDepotLaunchers pushback ["launch_O_Vorona_brown_F", 50, 1, 1, ["Vorona_HEAT"], 6];
 a3e_arr_AmmoDepotLaunchers pushback ["launch_MRAWS_sand_rail_F", 50, 1, 1, ["MRAWS_HEAT_F"], 6];
 a3e_arr_AmmoDepotLaunchers pushback ["launch_MRAWS_sand_F", 50, 1, 1, ["MRAWS_HEAT_F", "MRAWS_HE_F"], 6];
+
 
 // Weapons and ammo in the ordnance box
 a3e_arr_AmmoDepotOrdnance = [];
@@ -1182,8 +1233,8 @@ a3e_arr_AmmoDepotVehicleItems pushback ["ToolKit", 20, 1, 1, [], 0];
 a3e_arr_AmmoDepotVehicleItems pushback ["Medikit", 20, 1, 1, [], 0];
 a3e_arr_AmmoDepotVehicleItems pushback ["FirstAidKit", 100, 10, 50, [], 0];
 a3e_arr_AmmoDepotVehicleBackpacks = ["B_Bergen_mcamo_F","B_Bergen_hex_F"];
-// Items
 
+// Items
 // Index 0: Item classname.
 // Index 1: Item's probability of presence (in percent, 0-100)..
 // Index 2: Minimum amount.
@@ -1273,10 +1324,10 @@ a3e_arr_AmmoDepotItems pushback ["I_UavTerminal", 20, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["C_UavTerminal", 20, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["O_UavTerminal", 20, 1, 2];
 a3e_arr_AmmoDepotItems pushback ["B_UavTerminal", 20, 1, 2];
-
+a3e_arr_AmmoDepotItems pushback ["H_HelmetO_ViperSP_hex_F", 15, 1, 2];
+a3e_arr_AmmoDepotItems pushback ["H_HelmetO_ViperSP_ghex_F", 15, 1, 2];
 
 // Weapons that may show up in civilian cars
-
 // Index 0: Weapon classname.
 // Index 1: Magazine classname.
 // Index 2: Number of magazines.
@@ -1292,7 +1343,6 @@ a3e_arr_CivilianCarWeapons pushback ["arifle_Katiba_C_F", "30Rnd_65x39_caseless_
 a3e_arr_CivilianCarWeapons pushback ["arifle_Mk20_GL_ACO_F", "UGL_FlareWhite_F", 8];
 a3e_arr_CivilianCarWeapons pushback ["SMG_01_Holo_F", "30Rnd_45ACP_Mag_SMG_01_Tracer_Green", 5];
 a3e_arr_CivilianCarWeapons pushback ["SMG_02_ACO_F", "30Rnd_9x21_Mag", 12];
-a3e_arr_CivilianCarWeapons pushback ["SMG_03_TR_black", "50Rnd_570x28_SMG_03", 5];
 a3e_arr_CivilianCarWeapons pushback ["srifle_DMR_06_camo_khs_F", "20Rnd_762x51_Mag", 8];
 a3e_arr_CivilianCarWeapons pushback ["launch_RPG32_F", "RPG32_F", 2];
 a3e_arr_CivilianCarWeapons pushback ["MineDetector", objNull, 0];
@@ -1312,6 +1362,7 @@ a3e_arr_CivilianCarWeapons pushback [objNull, "SmokeShell", 5];
 a3e_arr_CivilianCarWeapons pushback ["optic_Yorris", objNull, 0];
 a3e_arr_CivilianCarWeapons pushback ["sgun_HunterShotgun_01_F", "2Rnd_12Gauge_Pellets", 3];
 a3e_arr_CivilianCarWeapons pushback ["sgun_HunterShotgun_01_sawedoff_F", "2Rnd_12Gauge_Pellets", 3];
+
 
 // Here is a list of scopes, might get randomly added to enemy patrols:
 a3e_arr_Scopes = [
@@ -1494,8 +1545,16 @@ a3e_arr_AquaticPatrols = [
 // use to add boxes from mods to the ammo depots
 //////////////////////////////////////////////////////////////////
 a3e_additional_weapon_box_1 = "Box_NATO_Equip_F";
-a3e_additional_weapon_box_2 = "Box_CSAT_Equip_F";
+a3e_additional_weapon_box_2 = "Box_NATO_WpsSpecial_F";
 
+//////////////////////////////////////////////////////////////////
+// fn_createMortarSites.sqf
+// Array of templates to usefor mortar sites
+//////////////////////////////////////////////////////////////////
+A3E_MortarSiteTemplates = [
+	"A3E_fnc_MortarSite"
+	];
+	
 //////////////////////////////////////////////////////////////////
 // fn_MortarSite
 // mortar spawned in the mortar camps
@@ -1545,112 +1604,14 @@ a3e_arr_CrashSiteWeapons pushback ["launch_NLAW_F", 10, 1, 2, ["NLAW_F"], 3];
 a3e_arr_CrashSiteWeapons pushback ["launch_O_Vorona_brown_F", 10, 1, 1, ["Vorona_HEAT", "Vorona_HE"], 6];
 a3e_arr_CrashSiteWeapons pushback ["launch_MRAWS_sand_rail_F", 10, 1, 1, ["MRAWS_HEAT_F", "MRAWS_HE_F"], 6];
 a3e_arr_CrashSiteWeapons pushback ["launch_MRAWS_sand_F", 10, 1, 1, ["MRAWS_HEAT_F", "MRAWS_HE_F"], 6];
-a3e_arr_CrashSiteWeapons pushback ["LMG_03_F", 3, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_CrashSiteWeapons pushback ["LMG_03_F", 3, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_CrashSiteWeapons pushback ["LMG_03_F", 3, 1, 3, ["200Rnd_556x45_Box_Tracer_Red_F"], 5];
-a3e_arr_CrashSiteWeapons pushback ["sma_minimi_mk3_762tlb", 3, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_CrashSiteWeapons pushback ["sma_minimi_mk3_762tlb_des", 3, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_CrashSiteWeapons pushback ["sma_minimi_mk3_762tlb_wdl", 3, 1, 3, ["SMA_150Rnd_762_M80A1_Tracer"], 5];
-a3e_arr_CrashSiteWeapons pushback ["MMG_01_hex_F", 3, 1, 3, ["150Rnd_93x64_Mag"], 5];
-a3e_arr_CrashSiteWeapons pushback ["MMG_01_tan_F", 3, 1, 3, ["150Rnd_93x64_Mag"], 5];
-a3e_arr_CrashSiteWeapons pushback ["MMG_02_black_F", 3, 1, 3, ["130Rnd_338_Mag"], 5];
-a3e_arr_CrashSiteWeapons pushback ["MMG_02_sand_F", 3, 1, 3, ["130Rnd_338_Mag"], 5];
-a3e_arr_CrashSiteWeapons pushback ["arifle_CTARS_blk_F", 3, 1, 3, ["100Rnd_580x42_Mag_Tracer_F"], 7];
-a3e_arr_CrashSiteWeapons pushback ["arifle_CTARS_hex_F", 3, 1, 3, ["100Rnd_580x42_hex_Mag_Tracer_F"], 7];
-a3e_arr_CrashSiteWeapons pushback ["arifle_CTARS_ghex_F", 3, 1, 3, ["100Rnd_580x42_ghex_Mag_Tracer_F"], 7];
-a3e_arr_CrashSiteWeapons pushback ["arifle_RPK12_F", 3, 1, 3, ["75rnd_762x39_AK12_Mag_Tracer_F"], 8];
-a3e_arr_CrashSiteWeapons pushback ["arifle_RPK12_arid_F", 3, 1, 3, ["75rnd_762x39_AK12_Arid_Mag_Tracer_F"], 8];
-a3e_arr_CrashSiteWeapons pushback ["arifle_RPK12_lush_F", 3, 1, 3, ["75rnd_762x39_AK12_Lush_Mag_Tracer_F"], 8];
-a3e_arr_CrashSiteWeapons pushback ["SMA_ACRREMMOE", 3, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_ACRREMMOEblk", 3, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_ACRREMGL", 3, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_ACRREMGL_B", 5, 1, 3, ["SMA_30Rnd_68x43_SPC_FMJ_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_L85RIS", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_L85RISNR", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_M4MOE", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_M4MOE_OD", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_M4MOE_Tan", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_M4_GL", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_STG_E4_OD_F", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_STG_E4_BLACK_F", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Steyr_AUG_F", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Steyr_AUG_BLACK_F", 5, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_MK16", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Mk16_black", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Mk16_Green", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Mk16_EGLM", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_ARX_blk_F", 5, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_ARX_ghex_F", 5, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_ARX_hex_F", 5, 1, 3, ["30Rnd_65x39_caseless_green_mag_Tracer","10Rnd_50BW_Mag_F"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_03_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_03_khaki_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_03_woodland_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_SPAR_03_blk_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_SPAR_03_khk_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_SPAR_03_snd_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Mk17_16", 5, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Mk17_16_black", 5, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Mk17_16_Green", 5, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Mk17_EGLM", 5, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_02_F", 3, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_02_camo_F", 3, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_02_sniper_F", 3, 1, 3, ["10Rnd_338_Mag"], 12];
-a3e_arr_CrashSiteWeapons pushback ["srifle_GM6_F", 5, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
-a3e_arr_CrashSiteWeapons pushback ["srifle_GM6_ghex_F", 5, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
-a3e_arr_CrashSiteWeapons pushback ["srifle_GM6_camo_F", 5, 1, 3, ["5Rnd_127x108_Mag","5Rnd_127x108_APDS_Mag"], 15];
-a3e_arr_CrashSiteWeapons pushback ["LMG_Mk200_F", 3, 1, 3, ["200Rnd_65x39_cased_Box_Tracer"], 5];
-a3e_arr_CrashSiteWeapons pushback ["LMG_Mk200_F", 3, 1, 3, ["200Rnd_65x39_cased_Box_Tracer"], 5];
-a3e_arr_CrashSiteWeapons pushback ["arifle_SPAR_02_blk_F", 3, 1, 3, ["150Rnd_556x45_Drum_Mag_Tracer_F"], 5];
-a3e_arr_CrashSiteWeapons pushback ["arifle_SPAR_02_khk_F", 3, 1, 3, ["150Rnd_556x45_Drum_Green_Mag_Tracer_F"], 5];
-a3e_arr_CrashSiteWeapons pushback ["arifle_SPAR_02_snd_F", 3, 1, 3, ["150Rnd_556x45_Drum_Sand_Mag_Tracer_F"], 5];
-a3e_arr_CrashSiteWeapons pushback ["LMG_Zafir_F", 3, 1, 3, ["150Rnd_762x54_Box_Tracer"], 5];
-a3e_arr_CrashSiteWeapons pushback ["LMG_Zafir_F", 3, 1, 3, ["150Rnd_762x54_Box_Tracer"], 5];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MXM_F", 3, 1, 3, ["100Rnd_65x39_caseless_mag_Tracer"], 7];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MXM_Black_F", 3, 1, 3, ["100Rnd_65x39_caseless_black_mag_tracer"], 7];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MXM_khk_F", 3, 1, 3, ["100Rnd_65x39_caseless_khaki_mag_tracer"], 7];
-a3e_arr_CrashSiteWeapons pushback ["arifle_AK12_GL_F", 3, 1, 3, ["75Rnd_762x39_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_CrashSiteWeapons pushback ["arifle_AK12_GL_arid_F", 3, 1, 3, ["75rnd_762x39_AK12_Arid_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_CrashSiteWeapons pushback ["arifle_AK12_GL_lush_F", 3, 1, 3, ["75rnd_762x39_AK12_Lush_Mag_Tracer_F","1Rnd_HE_Grenade_shell"], 8];
-a3e_arr_CrashSiteWeapons pushback ["SMG_03_TR_black", 3, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMG_03_TR_camo", 3, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMG_03_TR_hex", 3, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMG_03_TR_khaki", 3, 1, 3, ["50Rnd_570x28_SMG_03"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_ACRMOE_Blk", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_ACRMOE", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_ACRGL_B", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_ACRGL", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_HK416CUSTOMvfgB", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_HK416CUSTOMvfg", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_HK416CUSTOMvfgODP", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_HK416GLOD", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_MK18MOETAN", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_MK18MOEOD", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_MK18TANBLK_GL", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_MK18BLK_GL", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer","1Rnd_HE_Grenade_shell"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_SAR21_F", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_SAR21_F", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_Tavor_F", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_TavorBLK_F", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_TavorOD_F", 3, 1, 3, ["SMA_30Rnd_556x45_Mk262_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MSBS65_UBS_F", 3, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MSBS65_UBS_black_F", 3, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MSBS65_UBS_camo_F", 3, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_CrashSiteWeapons pushback ["arifle_MSBS65_UBS_sand_F", 3, 1, 3, ["30Rnd_65x39_caseless_msbs_mag_Tracer","6Rnd_12Gauge_Pellets"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_07_blk_F", 3, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_07_hex_F", 3, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_07_ghex_F", 3, 1, 3, ["20Rnd_650x39_Cased_Mag_F"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_06_camo_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_06_hunter_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_06_olive_F", 3, 1, 3, ["20Rnd_762x51_Mag"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_HK417_16in", 5, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_HK417_16in", 5, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["SMA_HK417_16in", 5, 1, 3, ["SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer"], 10];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_05_blk_F", 3, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_05_hex_f", 3, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_CrashSiteWeapons pushback ["srifle_DMR_05_tan_f", 3, 1, 3, ["10Rnd_93x64_DMR_05_Mag"], 12];
-a3e_arr_CrashSiteWeapons pushback ["srifle_LRR_F", 3, 1, 3, ["7Rnd_408_Mag"], 14];
-a3e_arr_CrashSiteWeapons pushback ["srifle_LRR_camo_F", 3, 1, 3, ["7Rnd_408_Mag"], 14];
-a3e_arr_CrashSiteWeapons pushback ["srifle_LRR_tna_F", 3, 1, 3, ["7Rnd_408_Mag"], 14];
+a3e_arr_CrashSiteWeapons pushback ["srifle_EBR_F", 10, 1, 2, ["20Rnd_762x51_Mag"], 8];
+a3e_arr_CrashSiteWeapons pushback ["srifle_LRR_F", 10, 1, 2, ["7Rnd_408_Mag"], 8];
+a3e_arr_CrashSiteWeapons pushback ["arifle_MX_SW_F", 20, 1, 2, ["100Rnd_65x39_caseless_mag_Tracer"], 6];
+a3e_arr_CrashSiteWeapons pushback ["SMG_01_Holo_pointer_snds_F", 10, 1, 2, ["30Rnd_45ACP_Mag_SMG_01"], 8];
+a3e_arr_CrashSiteWeapons pushback ["SMA_SKS_TAN_F", 30, 1, 2, ["SMA_30Rnd_762x39_7n23_AP_Red","SMA_30Rnd_762x39_SKS_FMJ_Red"], 8];
+a3e_arr_CrashSiteWeapons pushback ["SMA_HK417_16in", 30, 1, 2, ["SMA_20Rnd_762x51mm_M80A1_EPR_Tracer","SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer","SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer"], 8];
+a3e_arr_CrashSiteWeapons pushback ["sma_minimi_mk3_762tlb_des", 30, 1, 2, ["SMA_150Rnd_762_M80A1_Tracer"], 8];
+a3e_arr_CrashSiteWeapons pushback ["SMA_Mk17_16", 30, 1, 2, ["SMA_20Rnd_762x51mm_M80A1_EPR_Tracer","SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range_Tracer","SMA_20Rnd_762x51mm_Lapua_FMJ_Subsonic_Tracer"], 8];
 // Attachments and other items in crash site box
 a3e_arr_CrashSiteItems = [];
 a3e_arr_CrashSiteItems pushback ["optic_Hamr", 20, 1, 3];

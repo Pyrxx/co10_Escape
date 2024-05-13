@@ -84,7 +84,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}";
+		briefingName="{* MISSION *} {* ISLANDNAME *} {* VERSION *}";
 		timeOfChanges=1800.0002;
 		startWeather=0.1;
 		startWind=0.60000002;

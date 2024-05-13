@@ -64,7 +64,7 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
@@ -102,7 +102,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}";
+		briefingName="{* MISSION *} {* ISLANDNAME *} {* VERSION *}";
 		startWeather=0.099999994;
 		startWind=0.099999994;
 		startWaves=0.099999994;

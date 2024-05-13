@@ -1,9 +1,11 @@
 #define VERSION "{* VERSION *}"
 #define MISSIONNAME "{* MISSION_FULL *}"
-#define MISSIONNAMEFULL "{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}"
+#define MISSIONNAMEFULL "{* MISSION_FULL *} {* ISLANDNAME *} {* VERSION *}"
 #define MOD "{* MOD *}"
 #define ISLAND "{* ISLANDNAME *}"
 #define RELEASE "{* RELEASE *}"
+#define BUILD "{* COMMIT *}"
+//#define GAMETYPE {* GAMETYPE *}
 
 //--- [Controls Style Preprocessors]
 #define ST_LEFT 				0

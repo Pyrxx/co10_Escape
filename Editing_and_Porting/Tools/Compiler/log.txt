@@ -1,0 +1,317 @@
+2024-05-06 15:07:25.2017|INFO|EscapeCompiler.App|Escape Dev Packer V 3 started.
+2024-05-06 15:07:33.3555|INFO|EscapeCompiler.App|Disclaimer accepted.
+2024-05-06 15:07:33.6505|INFO|EscapeCompiler.App|Escape Compiler startup...
+2024-05-06 15:08:33.3669|INFO|EscapeCompiler.App|Loading Project from repository "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork"
+2024-05-06 15:08:33.4819|INFO|EscapeCompiler.Project|Repository path exists at "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape".
+2024-05-06 15:08:33.5593|INFO|EscapeCompiler.Project|Repository is at commit "master".
+2024-05-06 15:08:33.5593|INFO|EscapeCompiler.Project|Project created at "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork"
+2024-05-06 15:08:33.7516|INFO|EscapeCompiler.App|Loaded config with 34 missions.
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Altis" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VT7" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.WL_Rosche" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Takistan" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Lythium" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Esseker" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.CUP_Chernarus_A3" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Kerama" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_summer" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Malden" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.SefrouRamal" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.Tanoa" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Stratis" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.stozec" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.zdanice" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.3085|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_winter" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.zdanice" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Stratis" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Tembelan" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Lythium" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_winter" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_kujari" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Ruha" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Kerama" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.blud_vidda" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Altis" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_anizay" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.SefrouRamal" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_cham" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Takistan" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaa" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Esseker" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaaw" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Malden" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VT7" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.WL_Rosche" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_Contact_CSAT_vs_NATO.Enoch" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_chamw" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.UMB_Colombia" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.juju_kalahari" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_summer" successfull
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.stozec" successfull
+2024-05-06 15:08:51.4475|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Gulfcoast" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4475|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Maksniemi" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4375|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.CUP_Chernarus_A3" successfull
+2024-05-06 15:08:51.4475|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VTF_Lybor" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Ruha" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.IslaPera" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.juju_sahatra" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_cham" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.go_map_fjord" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaaw" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaa" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.blud_vidda" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_chamw" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.juju_kalahari" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_anizay" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.Tanoa" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Maksniemi" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.UMB_Colombia" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_Contact_CSAT_vs_NATO.Enoch" successfull
+2024-05-06 15:08:51.4645|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Gulfcoast" successfull
+2024-05-06 15:08:51.4775|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Tembelan" successfull
+2024-05-06 15:08:51.4775|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_kujari" successfull
+2024-05-06 15:08:51.4775|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VTF_Lybor" successfull
+2024-05-06 15:08:51.4775|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.juju_sahatra" successfull
+2024-05-06 15:08:51.4775|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.IslaPera" successfull
+2024-05-06 15:08:51.4775|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.go_map_fjord" successfull
+2024-05-06 15:09:16.9395|INFO|EscapeCompiler.App|Escape Compiler exiting...
+2024-05-06 15:09:16.9395|INFO|EscapeCompiler.App|Aborted at folder selection
+2024-05-06 16:05:57.0945|INFO|EscapeCompiler.App|Escape Dev Packer V 3 started.
+2024-05-06 16:06:03.3915|INFO|EscapeCompiler.App|Disclaimer accepted.
+2024-05-06 16:06:03.4465|INFO|EscapeCompiler.App|Escape Compiler startup...
+2024-05-06 16:06:17.5575|INFO|EscapeCompiler.App|Escape Compiler exiting...
+2024-05-06 16:06:17.5575|INFO|EscapeCompiler.App|Aborted at folder selection
+2024-05-06 16:06:23.3205|INFO|EscapeCompiler.App|Escape Dev Packer V 3 started.
+2024-05-06 16:06:44.2755|INFO|EscapeCompiler.App|Disclaimer accepted.
+2024-05-06 16:06:44.3305|INFO|EscapeCompiler.App|Escape Compiler startup...
+2024-05-06 16:06:48.3215|INFO|EscapeCompiler.App|Loading Project from repository "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork"
+2024-05-06 16:06:48.3215|INFO|EscapeCompiler.Project|Repository path exists at "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape".
+2024-05-06 16:06:48.3415|INFO|EscapeCompiler.Project|Repository is at commit "master".
+2024-05-06 16:06:48.3415|INFO|EscapeCompiler.Project|Project created at "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork"
+2024-05-06 16:06:48.4555|INFO|EscapeCompiler.App|Loaded config with 34 missions.
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Stratis" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VT7" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Takistan" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.WL_Rosche" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Esseker" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Lythium" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Kerama" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Altis" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_winter" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.SefrouRamal" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.zdanice" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.stozec" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.Tanoa" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_summer" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.CUP_Chernarus_A3" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.5945|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Malden" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Takistan" successfull
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.zdanice" successfull
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Tembelan" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Stratis" successfull
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Altis" successfull
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.blud_vidda" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Lythium" successfull
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.SefrouRamal" successfull
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_cham" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_summer" successfull
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_chamw" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.WL_Rosche" successfull
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_anizay" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Malden" successfull
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaaw" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Ruha" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaa" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_winter" successfull
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.UMB_Colombia" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.stozec" successfull
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.juju_kalahari" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VT7" successfull
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_Contact_CSAT_vs_NATO.Enoch" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6305|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_kujari" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Kerama" successfull
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Maksniemi" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.CUP_Chernarus_A3" successfull
+2024-05-06 16:06:51.6335|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Gulfcoast" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6495|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Esseker" successfull
+2024-05-06 16:06:51.6495|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VTF_Lybor" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6495|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.blud_vidda" successfull
+2024-05-06 16:06:51.6495|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.IslaPera" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaaw" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_cham" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.go_map_fjord" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.juju_sahatra" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_anizay" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.juju_kalahari" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaa" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_Contact_CSAT_vs_NATO.Enoch" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_chamw" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.UMB_Colombia" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Maksniemi" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Tembelan" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VTF_Lybor" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_kujari" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Ruha" successfull
+2024-05-06 16:06:51.6655|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Gulfcoast" successfull
+2024-05-06 16:06:51.6825|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.go_map_fjord" successfull
+2024-05-06 16:06:51.6825|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.IslaPera" successfull
+2024-05-06 16:06:51.6825|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.juju_sahatra" successfull
+2024-05-06 16:06:51.7325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.Tanoa" successfull
+2024-05-06 16:06:57.5443|INFO|EscapeCompiler.App|Escape Compiler exiting...
+2024-05-06 16:06:57.5443|INFO|EscapeCompiler.App|Aborted at folder selection
+2024-05-06 16:12:59.6855|INFO|EscapeCompiler.App|Escape Dev Packer V 3 started.
+2024-05-06 16:13:06.1295|INFO|EscapeCompiler.App|Disclaimer accepted.
+2024-05-06 16:13:06.1845|INFO|EscapeCompiler.App|Escape Compiler startup...
+2024-05-06 16:13:09.3405|INFO|EscapeCompiler.App|Loading Project from repository "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork"
+2024-05-06 16:13:09.3405|INFO|EscapeCompiler.Project|Repository path exists at "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape".
+2024-05-06 16:13:09.3595|INFO|EscapeCompiler.Project|Repository is at commit "master".
+2024-05-06 16:13:09.3595|INFO|EscapeCompiler.Project|Project created at "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork"
+2024-05-06 16:13:09.4745|INFO|EscapeCompiler.App|Loaded config with 34 missions.
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.CUP_Chernarus_A3" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Takistan" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Malden" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.WL_Rosche" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Esseker" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.SefrouRamal" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Lythium" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Altis" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_summer" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Kerama" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3505|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VT7" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3585|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Stratis" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3585|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.zdanice" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3585|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.Tanoa" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3585|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_winter" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3585|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.stozec" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Kerama" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.zdanice" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Ruha" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Tembelan" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_winter" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Esseker" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.blud_vidda" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_kujari" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Altis" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_anizay" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Stratis" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Malden" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_chamw" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_cham" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.CUP_Chernarus_A3" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.stozec" successfull
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaaw" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaa" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.WL_Rosche" successfull
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.UMB_Colombia" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VT7" successfull
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.juju_kalahari" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Takistan" successfull
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_Contact_CSAT_vs_NATO.Enoch" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Lythium" successfull
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Maksniemi" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_summer" successfull
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Gulfcoast" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.SefrouRamal" successfull
+2024-05-06 16:13:12.3995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VTF_Lybor" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_anizay" successfull
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.IslaPera" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.juju_kalahari" successfull
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.juju_sahatra" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_cham" successfull
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.go_map_fjord" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_chamw" successfull
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaaw" successfull
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Ruha" successfull
+2024-05-06 16:13:12.4225|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Maksniemi" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Tembelan" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaa" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_kujari" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.UMB_Colombia" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.blud_vidda" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_Contact_CSAT_vs_NATO.Enoch" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Gulfcoast" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VTF_Lybor" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.IslaPera" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.juju_sahatra" successfull
+2024-05-06 16:13:12.4325|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.go_map_fjord" successfull
+2024-05-06 16:13:12.4925|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.Tanoa" successfull
+2024-05-06 16:13:16.5145|INFO|EscapeCompiler.App|Escape Compiler exiting...
+2024-05-06 16:13:16.5145|INFO|EscapeCompiler.App|Aborted at folder selection
+2024-05-06 18:30:06.0575|INFO|EscapeCompiler.App|Escape Dev Packer V 3 started.
+2024-05-06 18:30:12.8675|INFO|EscapeCompiler.App|Disclaimer accepted.
+2024-05-06 18:30:12.9225|INFO|EscapeCompiler.App|Escape Compiler startup...
+2024-05-06 18:30:15.9283|INFO|EscapeCompiler.App|Loading Project from repository "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork"
+2024-05-06 18:30:15.9313|INFO|EscapeCompiler.Project|Repository path exists at "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape".
+2024-05-06 18:30:15.9483|INFO|EscapeCompiler.Project|Repository is at commit "master".
+2024-05-06 18:30:15.9483|INFO|EscapeCompiler.Project|Project created at "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork"
+2024-05-06 18:30:16.0633|INFO|EscapeCompiler.App|Loaded config with 34 missions.
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.CUP_Chernarus_A3" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Kerama" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Stratis" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Esseker" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Lythium" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.WL_Rosche" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Takistan" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VT7" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.Tanoa" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Altis" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_winter" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Malden" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_summer" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.stozec" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.zdanice" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1545|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.SefrouRamal" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.zdanice" successfull
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Ruha" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Kerama" successfull
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Tembelan" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Lythium" successfull
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_kujari" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Stratis" successfull
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.blud_vidda" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Malden" successfull
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_anizay" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Esseker" successfull
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_cham" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_summer" successfull
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.WL_Rosche" successfull
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.CUP_Chernarus_A3" successfull
+2024-05-06 18:30:19.1965|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaa" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Altis" successfull
+2024-05-06 18:30:19.1965|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaaw" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.gm_weferlingen_winter" successfull
+2024-05-06 18:30:19.1965|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.UMB_Colombia" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1965|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.juju_kalahari" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1965|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_chamw" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1965|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VT7" successfull
+2024-05-06 18:30:19.1965|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_Contact_CSAT_vs_NATO.Enoch" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Takistan" successfull
+2024-05-06 18:30:19.1965|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Maksniemi" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.SefrouRamal" successfull
+2024-05-06 18:30:19.2125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Gulfcoast" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.1895|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.stozec" successfull
+2024-05-06 18:30:19.2125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VTF_Lybor" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_kujari" successfull
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_anizay" successfull
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.IslaPera" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.juju_sahatra" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_cham" successfull
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.go_map_fjord" to "I:\Games Archiv\Action, Shooter, RPG\ARMA 3\Campaigns & Missions\[COOP] Co10 Escape\_Aldalon-Fork\Build\missionfiles"
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaaw" successfull
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.hellanmaa" successfull
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.blud_vidda" successfull
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_Contact_CSAT_vs_NATO.Enoch" successfull
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Tembelan" successfull
+2024-05-06 18:30:19.2995|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Ruha" successfull
+2024-05-06 18:30:19.3125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.VTF_Lybor" successfull
+2024-05-06 18:30:19.3125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.juju_kalahari" successfull
+2024-05-06 18:30:19.3125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.tem_chamw" successfull
+2024-05-06 18:30:19.3125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.UMB_Colombia" successfull
+2024-05-06 18:30:19.3125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Maksniemi" successfull
+2024-05-06 18:30:19.3125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.Gulfcoast" successfull
+2024-05-06 18:30:19.3125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.go_map_fjord" successfull
+2024-05-06 18:30:19.3125|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_BIS_NATO_vs_CSAT.juju_sahatra" successfull
+2024-05-06 18:30:19.3210|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.IslaPera" successfull
+2024-05-06 18:30:19.3210|DEBUG|EscapeCompiler.Build.EscapeBuilder|Packing "co10_Escape_APEX_NATO_vs_CSAT.Tanoa" successfull
+2024-05-06 18:30:23.4675|INFO|EscapeCompiler.App|Escape Compiler exiting...
+2024-05-06 18:30:23.4675|INFO|EscapeCompiler.App|Aborted at folder selection

@@ -2,25 +2,25 @@ class Params
 {
     class A3E_Param_Loadparams
     {
-		title = "Parameter Load and Save (save params between sessions, see readme!)";
-		values[] = {0, 1, 2};
-		texts[] = {"Use settings below and save (settings will be restored on mission restart)", "Load previously saved settings (Use below if none found)", "Use settings below without saving"};
-		default = 1;
+            title = "Parameter Load and Save (save params between sessions, see readme!)";
+            values[] = {0, 1, 2};
+            texts[] = {"Use settings below and save (settings will be restored on mission restart)", "Load previously saved settings (Use below if none found)", "Use settings below without saving"};
+            default = 1;
 	};
 	class A3E_Param_Spacer1
     {
-			title = "==================== Difficulty Settings ====================";
-			values[] = {0};
-			texts[] = {""};
-			default = 0;
+            title = "==================== Difficulty Settings ====================";
+            values[] = {0};
+            texts[] = {""};
+            default = 0;
 	};
     class A3E_Param_EnemySkill
 	{
-		title = "Enemy Skill";
-		values[] = {0, 1, 2, 3, 4};
-		texts[] = {"Cadet", "Easy", "Normal", "Hard", "Extreme"};
-		livechanges = 1;
-		default = 0;
+            title = "Enemy Skill";
+            values[] = {0, 1, 2, 3, 4};
+            texts[] = {"Cadet", "Easy", "Normal", "Hard", "Extreme"};
+			livechanges = 1;
+            default = 1;
 	};
 	class A3E_Param_EnemyFrequency
 	{
@@ -36,7 +36,7 @@ class Params
 		values[]={2,4,6,8,-1,-2,-3};
 		texts[]={"Few (2-3)", "Some (3-5)", "Large (5-7)", "Max (7-9)","Players 1:0.5","Players 1:1","Players 1:1.5"};
 		livechanges = 1;
-		default = 4;
+		default = -3;
 	};
 	class A3E_Param_EnemySpawnDistance
 	{
@@ -131,7 +131,7 @@ class Params
 		title="Collect intel to reveal markers on map";
 		values[]={0,1};
 		texts[]={"Disabled","Enabled"};
-		default = 1;
+		default = 0;
 		tooltip = "This will enable the collection of intel from enemies. Intel will reveal locations on the map.";
 	};
 	class A3E_Param_IntelChance
@@ -140,7 +140,7 @@ class Params
 		values[]={5,10,20,30,40,50};
 		texts[]={"5%","10%","20%","30%","40%","50%"};
 		livechanges = 1;
-		default = 50;
+		default = 20;
 	};
 	class A3E_Param_RevealMarkers
 	{

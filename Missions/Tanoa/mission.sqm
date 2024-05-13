@@ -35,13 +35,15 @@ addons[]=
 	"A3_Boat_F_Boat_Transport_01",
 	"A3_Boat_F_Exp_Scooter_Transport_01",
 	"A3_Boat_F_Exp_Boat_Transport_02",
-	"A3_Characters_F_Exp"
+	"A3_Characters_F_Exp",
+	"A3_Characters_F",
+	"A3_Characters_F_Mark"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=6;
+		items=8;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -81,6 +83,20 @@ class AddonsMetaData
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="A3_Characters_F_Mark";
+			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -130,7 +146,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="{* MISSION_FULL *} {* ISLANDNAME *} | {* VERSION *}";
+		briefingName="{* MISSION *} {* ISLANDNAME *} {* VERSION *}";
 		overviewText="Fight to escape the green hell or die trying.";
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -140,15 +156,15 @@ class Mission
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
 		year=2035;
-		month=12;
-		day=09;
-		hour=06;
+		month=6;
+		day=10;
+		hour=15;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
 	class Entities
 	{
-		items=577;
+		items=551;
 		class Item0
 		{
 			dataType="Marker";
@@ -73706,459 +73722,6 @@ class Mission
 			colorName="ColorGreen";
 			id=1889;
 			atlOffset=176.38898;
-		};
-		class Item551
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11789.02,8.6022139,13052.04};
-				angles[]={0,0,6.2820859};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24675658;
-			};
-			id=1891;
-			type="C_Plane_Civil_01_F";
-			atlOffset=0.045000076;
-		};
-		class Item552
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11774.181,8.619215,13054.475};
-				angles[]={0,0.51534337,6.2820859};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.25238198;
-			};
-			id=1892;
-			type="C_Plane_Civil_01_racing_F";
-			atlOffset=0.00035238266;
-		};
-		class Item553
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11824.148,8.6152153,13041.378};
-				angles[]={0,0.51534337,6.2824869};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1893;
-			type="C_Plane_Civil_01_racing_F";
-			atlOffset=0.00084114075;
-		};
-		class Item554
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11838.987,8.6475458,13038.943};
-				angles[]={0,0,6.2824869};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1894;
-			type="C_Plane_Civil_01_F";
-			atlOffset=0.044623852;
-		};
-		class Item555
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11897.186,7.5547056,13058.555};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.25238198;
-			};
-			id=1895;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item556
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11880.49,7.5547056,13060.943};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1896;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item557
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6949.3989,4.2672157,7182.7368};
-				angles[]={0,0.033440508,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.25238198;
-			};
-			id=1897;
-			type="C_Plane_Civil_01_racing_F";
-		};
-		class Item558
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6964.4331,4.3122158,7183.0537};
-				angles[]={0,6.2718058,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.25238198;
-			};
-			id=1898;
-			type="C_Plane_Civil_01_F";
-			atlOffset=0.045000076;
-		};
-		class Item559
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6947.7368,3.2647059,7320.666};
-				angles[]={0,1.3844824,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1899;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item560
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6917.9712,3.2647059,7477.9619};
-				angles[]={0,1.3820214,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24675658;
-			};
-			id=1900;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item561
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6844.8662,4.2872157,7263.0947};
-				angles[]={0,0.65908867,6.2826962};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.25238198;
-			};
-			id=1901;
-			type="C_Plane_Civil_01_racing_F";
-			atlOffset=0.00042200089;
-		};
-		class Item562
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6819.1357,4.3042154,7324.3115};
-				angles[]={0,2.2620864,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.25238198;
-			};
-			id=1902;
-			type="C_Plane_Civil_01_F";
-			atlOffset=0.00045657158;
-		};
-		class Item563
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6920.0669,3.2647059,7466.1338};
-				angles[]={0,1.3820214,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1903;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item564
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6945.8169,3.2647059,7333.7603};
-				angles[]={0,1.3844824,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24675658;
-			};
-			id=1904;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item565
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2152.6348,14.457145,3440.6033};
-				angles[]={6.2618575,5.9683452,0.0026703537};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1905;
-			type="C_Plane_Civil_01_racing_F";
-		};
-		class Item566
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2166.6455,14.588701,3446.0259};
-				angles[]={6.2805324,5.9235077,0.0026529003};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1906;
-			type="C_Plane_Civil_01_F";
-			atlOffset=0.045000076;
-		};
-		class Item567
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2113.6418,13.346616,3418.5398};
-				angles[]={6.2618575,1.3844824,0.0053407075};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1907;
-			type="C_Heli_Light_01_civil_F";
-			atlOffset=9.5367432e-007;
-		};
-		class Item568
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2116.1206,13.384986,3403.9517};
-				angles[]={6.2671809,1.3844824,0.013334315};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1908;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item569
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11721.563,6.6162152,3178.0276};
-				angles[]={0,3.7444644,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1909;
-			type="C_Plane_Civil_01_racing_F";
-			atlOffset=6.6757202e-006;
-		};
-		class Item570
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11782.905,6.6961069,3130.2083};
-				angles[]={0,3.769562,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1910;
-			type="C_Plane_Civil_01_F";
-			atlOffset=0.00043678284;
-		};
-		class Item571
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11742.009,5.4720902,3151.2522};
-				angles[]={0,3.8036311,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24675658;
-			};
-			id=1911;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item572
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={11752.611,5.4642,3143.2605};
-				angles[]={0,3.806493,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1912;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item573
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2216.4177,15.101215,13437.968};
-				angles[]={0,2.4989798,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.24956919;
-			};
-			id=1913;
-			type="C_Plane_Civil_01_racing_F";
-			atlOffset=0.043999672;
-		};
-		class Item574
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2177.6697,15.067216,13408.118};
-				angles[]={0,2.4869196,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.25238198;
-			};
-			id=1914;
-			type="C_Plane_Civil_01_F";
-			atlOffset=2.9563904e-005;
-		};
-		class Item575
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2161.1899,14.054706,13369.327};
-				angles[]={0,2.4673545,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.25238198;
-			};
-			id=1915;
-			type="C_Heli_Light_01_civil_F";
-		};
-		class Item576
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={2149.197,14.054706,13359.541};
-				angles[]={0,2.4706182,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				presence=0.2551946;
-			};
-			id=1916;
-			type="C_Heli_Light_01_civil_F";
 		};
 	};
 };

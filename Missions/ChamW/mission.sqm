@@ -24,13 +24,15 @@ addons[]=
 	{* REQUIRE *}
 	"A3_Ui_F",
 	"A3_Modules_F",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Characters_F_Exp",
+	"A3_Characters_F_Mark"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=5;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -52,6 +54,20 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item3
+		{
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Characters_F_Mark";
+			name="Arma 3 Marksmen - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=15754918;
@@ -63,7 +79,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="{* MISSION *} {* ISLANDNAME *} {* MOD *} {* VERSION *}";
+		briefingName="{* MISSION *} {* ISLANDNAME *} {* VERSION *}";
 		timeOfChanges=1800.0002;
 		startWeather=0.2;
 		startWind=0.1000001;

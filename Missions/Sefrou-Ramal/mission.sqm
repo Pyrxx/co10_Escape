@@ -29,13 +29,16 @@ addons[]=
 	{* REQUIRE *}
 	"A3_Modules_F",
 	"A3_Ui_F",
-	"Characters_f_lxWS"
+	"Characters_f_lxWS",
+	"A3_Characters_F",
+	"A3_Characters_F_Exp",
+	"A3_Characters_F_Mark"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=3;
+		items=6;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -57,6 +60,27 @@ class AddonsMetaData
 			author="Rotators Collective";
 			url="https://www.arma3.com";
 		};
+		class Item3
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Characters_F_Mark";
+			name="Arma 3 Marksmen - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -72,7 +96,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="{* MISSION *} {* ISLANDNAME *} {* MOD *} {* VERSION *}";
+		briefingName="{* MISSION *} {* ISLANDNAME *} {* VERSION *}";
 		timeOfChanges=1800.0002;
 		startWeather=0.15000001;
 		startWind=0.1;

@@ -3,7 +3,7 @@
 // Mission Header
 class Header
 {
-  gameType = Escape;
+  gameType = co10esc; //gameType = Escape if not Vietnam CDLC
   minPlayers = 1;
   maxPlayers = 10;
 };
@@ -11,9 +11,9 @@ class Header
 onLoadName = MISSIONNAME;
 onLoadMission = MISSIONNAMEFULL;
 OnLoadMissionTime = FALSE;
-dev = "NeoArmageddon and Scruffy";
+dev = "Captain P. Star and Scruffy";
 briefingName = MISSIONNAMEFULL;
-author = "NeoArmageddon and Scruffy";
+author = "Captain P. Star and Scruffy";
 overviewPicture = "a3\Missions_F_Gamma\data\img\MP_COOP_m03_overview_CA.paa";
 overviewText = MISSIONNAMEFULL;
 loadScreen = "escape_banner.paa"; 
@@ -22,6 +22,7 @@ EscapeIsland = ISLAND;
 EscapeMod = MOD;
 EscapeVersion = VERSION;
 EscapeRelease = RELEASE;
+EscapeBuild = BUILD;
 cba_settings_hasSettingsFile = 1;
 
 class Extended_PreInit_EventHandlers {
@@ -32,7 +33,7 @@ class Extended_PreInit_EventHandlers {
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 Respawn = "INSTANT";
-RespawnDelay = 60;
+RespawnDelay = 5;
 respawnButton = 0;
 
 disabledAI = 1;
@@ -90,10 +91,11 @@ class CfgDebriefingSections
 
 #include "include\params.hpp"
 #include "include\functions.hpp"
+
 #include "Scripts\outlw_magRepack\MagRepack_config.hpp"
 
-// Aldalon
 #include "Aldalon\StatusHud\config.hpp"
+
 
 class CfgRemoteExec
 {        
@@ -116,105 +118,108 @@ class CfgRemoteExec
 class RscTitles {
 	titles[] = {HSC_View}; 
 	class HSC_View {
-		idd = 620000;
-		duration = 15000;
-		name = $STR_A3E_hindsightCam_title;
-		onLoad = "uiNamespace setVariable ['ATHSC_View', _this select 0]";
-		onUnload = "uiNamespace setVariable ['ATHSC_View', displayNull]";
+			idd = 620000;
+			duration = 15000;
+			name = $STR_A3E_hindsightCam_title;
+			onLoad = "uiNamespace setVariable ['ATHSC_View', _this select 0]";
+			onUnload = "uiNamespace setVariable ['ATHSC_View', displayNull]";
 
-		class controlsBackground {
-			class Rsc_MouseArea {
-				idc = 170001;
-				style = ST_MULTI;
+		   class controlsBackground {
+				class Rsc_MouseArea {
+					idc = 170001;
+					style = ST_MULTI;
+					
+					type = CT_STATIC;
 				
-				type = CT_STATIC;
-			
-				shadow = 1;
-				colorShadow[] = {0,0,0,0.5};
-				font = "PuristaMedium";
-				SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-				colorText[] = {1,1,1,1.0};
-				colorBackground[] = {0,0,0,0};
-				linespacing = 1;
-				x = "safezoneX";
-				y = "safezoneY";
-				w = "safezoneW";
-				h = "safezoneH";
+					shadow = 1;
+					colorShadow[] = {0,0,0,0.5};
+					font = "PuristaMedium";
+					SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+					colorText[] = {1,1,1,1.0};
+					colorBackground[] = {0,0,0,0};
+					linespacing = 1;
+					x = "safezoneX";
+					y = "safezoneY";
+					w = "safezoneW";
+					h = "safezoneH";
 
-				text = "";
-				onMouseMoving = "";
-				onMouseEnter = "";
-				onMouseExit = "";
-				onMouseZChanged = "";
-				onKeyDown = "systemchat str _this;";
-			};
-		};
-		
-		class controls {
-			class Rsc_TargetText {
-				idc = 170002;
-				text = $STR_A3E_hindsightCam_unconscious;
-				type = 13;
-				style = 2;
-					
-				x = "SafeZoneX + (SafeZoneW * 0.3)";
-				y = "SafeZoneY + (SafezoneH * 0.8)";
-				w = "(SafeZoneW) * 0.4";
-				h = "SafezoneH * 0.1";  
-					
-					class Attributes {
-					font = "TahomaB";
-					color = "#000000";
-					align = "center";
-					valign = "middle";
-					shadow = false;
-					shadowColor = "#ff0000";
-					size = "2";
+					text = "";
+					onMouseMoving = "";
+					onMouseEnter = "";
+					onMouseExit = "";
+					onMouseZChanged = "";
+					onKeyDown = "systemchat str _this;";
 				};
-				shadow = 2;
-				font = "RobotoCondensedBold";
-				colorText[] = {1, 1, 1, 1};
-				Size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-				SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
-				colorBackground[] = {0, 0, 0, 0};
 			};
+			
+			class controls {
+				class Rsc_TargetText {
+					idc = 170002;
+					text = $STR_A3E_hindsightCam_unconscious;
+					type = 13;
+					style = 2;
+					  
+					x = "SafeZoneX + (SafeZoneW * 0.3)";
+					y = "SafeZoneY + (SafezoneH * 0.8)";
+					w = "(SafeZoneW) * 0.4";
+					h = "SafezoneH * 0.1";  
+					  
+					  class Attributes {
+						font = "TahomaB";
+						color = "#000000";
+						align = "center";
+						valign = "middle";
+						shadow = false;
+						shadowColor = "#ff0000";
+						size = "2";
+					};
+					shadow = 2;
+					font = "RobotoCondensedBold";
+					colorText[] = {1, 1, 1, 1};
+					Size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
+					SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
+					colorBackground[] = {0, 0, 0, 0};
+				};
 			class Rsc_HelpText {
-				idc = -1;
-				text = $STR_A3E_hindsightCam_helpText;
-				type = 13;
-				style = 0;
-					
-				x = "SafeZoneX + (SafeZoneW * 0.02)";
-				y = "SafeZoneY + (SafezoneH * 0.85)";
-				w = "(SafeZoneW) * 0.2";
-				h = "SafezoneH * 0.15";  
-					
-				class Attributes {
-					font = "TahomaB";
-					color = "#000000";
-					align = "center";
-					valign = "middle";
-					shadow = false;
-					shadowColor = "#ff0000";
-					size = "2";
+					idc = -1;
+					text = $STR_A3E_hindsightCam_helpText;
+					type = 13;
+					style = 0;
+					  
+					x = "SafeZoneX + (SafeZoneW * 0.02)";
+					y = "SafeZoneY + (SafezoneH * 0.85)";
+					w = "(SafeZoneW) * 0.2";
+					h = "SafezoneH * 0.15";  
+					  
+					class Attributes {
+						font = "TahomaB";
+						color = "#000000";
+						align = "center";
+						valign = "middle";
+						shadow = false;
+						shadowColor = "#ff0000";
+						size = "2";
+					};
+					shadow = 2;
+					font = "RobotoCondensedBold";
+					colorText[] = {1, 1, 1, 1};
+					Size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.4)";
+					SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.4)";
+					colorBackground[] = {0, 0, 0, 0};
 				};
-				shadow = 2;
-				font = "RobotoCondensedBold";
-				colorText[] = {1, 1, 1, 1};
-				Size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.4)";
-				SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.4)";
-				colorBackground[] = {0, 0, 0, 0};
 			};
-		};
 	};
 
-	// Aldalon
 	#include "Aldalon\StatusHud\UI\defines.hpp"
 
 };
+
+
 class CfgCommands {
    allowedHTMLLoadURIs[] += {
-      "http://escape.anzp.de/track.php*"
+      "http://escape.anzp.de/track.php*",
+	  "http://co10esc.anzp.de/api*",
+	  "http://localhost:5093/api/session*"
    };
 };
 class CfgLeaflets
